@@ -2,7 +2,7 @@
  * model badge. The interview room renders WITHOUT this shell (focus mode). */
 
 import { BarChart3, BellRing, Briefcase, Compass, Cpu, FileUp, PenLine, TrendingUp, LogOut, Menu, Mic, School, Sunrise, UserRound, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 import { useAuth } from "../auth";
@@ -174,8 +174,12 @@ function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
 
 export function Shell({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
+  const mainRef = useRef<HTMLElement>(null);
   const location = useLocation();
-  useEffect(() => setOpen(false), [location.pathname]);
+  useEffect(() => {
+    setOpen(false);
+    mainRef.current?.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="flex h-dvh flex-col overflow-hidden md:flex-row">
@@ -203,7 +207,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </button>
         </div>
       )}
-      <main className="min-h-0 flex-1 overflow-y-auto">{children}</main><Walkthrough/>
+      <main ref={mainRef} className="min-h-0 flex-1 overflow-y-auto">{children}</main><Walkthrough/>
     </div>
   );
 }
