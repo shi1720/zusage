@@ -25,6 +25,8 @@ from zusage.llm.client import ChatClient
 
 
 def run(model_path, data_dir, language):
+    assert mx.is_available(mx.gpu), "This benchmark requires Apple Metal"
+    mx.set_default_device(mx.gpu)
     mx.set_memory_limit(12 * 1024**3)
     mx.set_cache_limit(1024**3)
     started = time.perf_counter()
@@ -47,8 +49,12 @@ def run(model_path, data_dir, language):
                               "usage": {"prompt_tokens": len(tokenizer.encode(prompt)),
                                         "completion_tokens": len(tokenizer.encode(reply))}})
 
+    class MetalTransport(httpx.BaseTransport):
+        def handle_request(self, request):
+            return infer(request)
+
     brain = ApertusBrain(ChatClient("http://local-metal/v1", "", "apertus-v1.5-8b-4bit",
-                                   transport=httpx.MockTransport(infer), max_retries=0))
+                                   transport=MetalTransport(), max_retries=0))
     kb = load_knowledge(data_dir)
     bank = load_bank(data_dir)
     state = core.start(kb, brain, {"language": language, "occupation_id": "fage_efz",
@@ -67,7 +73,8 @@ def run(model_path, data_dir, language):
     report = state["report"]
     degraded = sum(bool(turn["assessment"].get("degraded")) for turn in state["turns"])
     result = {"model": "tokimoa/apertus-v1.5-8b-mlx-4bit", "quantization_bits": 4,
-              "hardware": platform.machine(), "accelerator": "Apple Metal, unified memory",
+              "hardware": platform.machine(), "gpu": mx.device_info()["device_name"],
+              "physical_unified_ram_gib": round(mx.device_info()["memory_size"] / 1024**3, 3), "accelerator": "Apple Metal, unified memory",
               "language": language, "answers": report["answers"], "model_calls": len(calls),
               "calls_per_answer": report["llm_calls_per_answer"], "degraded_turns": degraded,
               "peak_metal_gib": round(mx.get_peak_memory() / 1024**3, 3),

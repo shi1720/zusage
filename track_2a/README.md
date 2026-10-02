@@ -39,6 +39,21 @@ uv run --project src/backend python scripts/e2e.py --url https://zusage.web.app
 
 The deployment script validates the source, builds the container, deploys only the dedicated Zusage Cloud Run service and Firebase site, waits for routing and runs a live interview selfcheck. It expects the dedicated database, runtime service account and secrets to be provisioned first.
 
+## Measure local Apertus on an Apple Silicon Mac
+
+The optional Metal benchmark runs a complete interview through the same coach engine using real local Apertus weights. It measures peak Metal allocation and process memory, model calls, fallback turns and latency. It does not use the hosted inference endpoint. Run from `track_2a`:
+
+```bash
+uv venv .mlx-bench --python 3.12
+uv pip install --python .mlx-bench/bin/python ./src/backend mlx-lm
+.mlx-bench/bin/hf download tokimoa/apertus-v1.5-8b-mlx-4bit \
+  --local-dir models/apertus-mlx --include '*.json' '*.safetensors' '*.txt' '*.model'
+.mlx-bench/bin/python scripts/local_mlx_benchmark.py \
+  --model models/apertus-mlx --data data --out local-benchmark.json
+```
+
+This uses a [community 4-bit MLX conversion](https://huggingface.co/tokimoa/apertus-v1.5-8b-mlx-4bit) of Apertus 1.5 8B. Apple GPUs share system memory, so Metal allocation differs from dedicated NVIDIA VRAM. Record the actual result before claiming the hardware gate. The Docker path remains the application deployment route.
+
 ## Deployment and verification
 
 Firebase Hosting serves the frontend at **https://zusage.web.app**. Cloud Run in `europe-west1` serves the API; Cloud SQL PostgreSQL persists data. Secret Manager holds server credentials. An authenticated hourly Cloud Scheduler job prepares follow-ups for registered accounts and sends optional Web Push notifications. Demo visitors are excluded from background scans.

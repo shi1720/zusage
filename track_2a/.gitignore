@@ -3,7 +3,7 @@
 .env.*
 !.env.example
 
-# Model weights and checkpoints — do not commit these
+# Model weights and checkpoints - do not commit these
 *.bin
 *.safetensors
 *.gguf
@@ -25,3 +25,6 @@ build/
 .DS_Store
 .idea/
 .vscode/
+
+.mlx-bench/
+models/

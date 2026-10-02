@@ -3,7 +3,7 @@
 .env.*
 !.env.example
 
-# Model weights and checkpoints — do not commit these
+# Model weights and checkpoints - do not commit these
 *.bin
 *.safetensors
 *.gguf
@@ -35,3 +35,6 @@ data/eval/results-latest/
 
 .firebase/
 firebase-debug.log
+
+.mlx-bench/
+models/
