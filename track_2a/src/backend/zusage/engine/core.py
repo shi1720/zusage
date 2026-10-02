@@ -219,7 +219,7 @@ def _sanitize(
         scores = validate.clamp_scores(fallback.get("scores"), targets)
     evidence = validate.shorten_quote(validate.text_field(raw.get("evidence"), 300), answer)
     if evidence and not validate.evidence_in_answer(evidence, answer):
-        log.info("dropping unverifiable evidence quote: %r", evidence[:60])
+        log.info("dropping unverifiable evidence quote")
         evidence = ""
     quality = raw.get("quality") if raw.get("quality") in validate.QUALITIES else "solid"
     flag = raw.get("flag") if raw.get("flag") in validate.FLAGS else "none"

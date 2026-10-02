@@ -3,6 +3,7 @@
 
 import { ArrowRight, GraduationCap, Lock, Mountain, School, Sparkles } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { api, ApiError } from "../api";
 import { useAuth } from "../auth";
@@ -53,6 +54,7 @@ function HeroExchange() {
 }
 
 function AuthCard() {
+  const navigate = useNavigate();
   const { t, lang } = useI18n();
   const { setUser, config } = useAuth();
   const [tab, setTab] = useState<"signin" | "signup" | "recover">("signin");
@@ -66,6 +68,7 @@ function AuthCard() {
     setError(null);
     try {
       setUser(await fn());
+      navigate("/", {replace:true});
     } catch (exc) {
       setError(exc instanceof ApiError ? exc.message : t("Something went wrong - try again."));
     } finally {
