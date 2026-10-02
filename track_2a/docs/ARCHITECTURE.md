@@ -7,7 +7,7 @@ flowchart TB
     subgraph browser [Browser - React 19 + TypeScript]
       UI[Student app<br/>Today · Practice · Interview room · Gipfelbuch · Tracker · Progress]
       TC[Teacher cockpit<br/>class heatmap · weak spots · student detail]
-      VOX[Voice layer<br/>on-device TTS · opt-in dictation]
+      VOX[Voice layer<br/>optional neural/device speech · opt-in dictation]
     end
 
     subgraph container [Zusage container - FastAPI, single process]
@@ -29,6 +29,8 @@ flowchart TB
 
     LLM[Apertus 1.5 8B<br/>any OpenAI-compatible endpoint]
 
+    VOX -->|owned interviewer text| SPEECH[Speech API]
+    SPEECH -->|optional synthesis| GOOGLE[Google Chirp 3 HD EU]
     UI --> IVAPI & JOUR
     TC --> CLS
     IVAPI --> TG
@@ -69,16 +71,16 @@ sequenceDiagram
 
 | Decision | Why |
 |---|---|
-| **Single structured call per answer** | Coach and interviewer reason over the same evidence (no contradictions); ~1.1 calls/answer vs. the FHGR gate of 5; 4× cheaper than a multi-agent design; lower latency. |
+| **Single structured call per answer** | Coach and interviewer reason over the same evidence (no contradictions); ~1.1 calls/answer vs. the FHGR gate of 5; fewer requests than separate interviewer and assessor calls. |
 | **Deterministic planner** | Questions are pre-written and reviewed in 5 languages → no language drift, no off-topic questions, no illegal questions. The model adapts *within* the skeleton (follow-ups, reactions). |
 | **Planner variation + focus** | Seeded alternatives per slot (variation across sessions) and preference for questions that train the student's two weakest criteria (adaptive practice). |
-| **Validator as a gate** | Clamps scores, requires the evidence quote to occur in the answer, rejects wrong-language text, falls back to hand-written phrases. Makes an 8B model safe to put in front of minors. |
+| **Validator as a gate** | Clamps scores, requires the evidence quote to occur in the answer, rejects wrong-language text, falls back to hand-written phrases. Reduces specific failure modes; educator evaluation is still needed. |
 | **Graceful degradation** | If Apertus fails, the turn is assessed by the offline coach and flagged `degraded`; the interview never breaks. |
 | **State = one JSON document** | Engine is stateless; any worker continues any interview; the same state runs inside LangGraph/Aegra. |
 | **Two LangGraph graphs, one implementation** | `turn_graph` (one invocation per answer, app-managed persistence) for the web app; `interview_graph` (interrupt-driven) for Aegra / LangGraph Server. Both call the same `core.py` functions. |
 | **Offline brain = baseline** | The rule-based coach keeps the product and CI credential-free *and* serves as the baseline in the evaluation harness. |
 | **Cookie sessions + Bearer** | HttpOnly cookie for browsers (no tokens in JS); the same JWT as Bearer for automated judges/harnesses. |
-| **Self-hosted fonts, no CDN** | The container makes no runtime call other than to the configured LLM endpoint - air-gappable. |
+| **Self-hosted fonts, no CDN** | No font CDN dependency. Local inference and device speech support an isolated setup; hosted inference, optional neural speech, posting retrieval and push use external services. |
 
 ## Data model
 

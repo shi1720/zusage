@@ -30,7 +30,7 @@ build:
 run: .env build
 	-@docker rm -f $(NAME) >/dev/null 2>&1
 	@env_args=(); for key in LLM_NAME LLM_BASE_URL LLM_API_KEY; do \
-		if [[ -v $$key ]]; then env_args+=(-e "$$key"); fi; \
+		if printenv "$$key" >/dev/null; then env_args+=(-e "$$key"); fi; \
 	done; docker run -d --name $(NAME) --env-file .env "$${env_args[@]}" -p $(PORT):8080 -v $(NAME)-data:/app/var $(IMAGE)
 	@echo "→ waiting for Zusage to become healthy…"
 	@for i in $$(seq 1 60); do curl -fs $(URL)/api/health >/dev/null 2>&1 && break; sleep 2; done
