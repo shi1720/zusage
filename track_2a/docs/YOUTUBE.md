@@ -28,3 +28,8 @@ The extended walkthrough is 2 minutes 58 seconds. The submission cut is 1 minute
 #HackApertus #Apertus #SwissAI #Apprenticeships #Education
 
 Original demo and narration: CC BY 4.0. Attribution: Shivam Gupta, Zusage. https://creativecommons.org/licenses/by/4.0/
+
+## Published videos
+
+- Submission cut: https://youtu.be/kNNu796CueY
+- Extended walkthrough: https://youtu.be/jgWSAaASskg

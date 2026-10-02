@@ -12,3 +12,7 @@
 - Swiss student team: No, confirmed by the participant.
 
 The actual Hack Apertus form requests a report and demo video, rather than a Devpost story editor. Keep the project story available for the notes field or another submission platform. The participant approved publication and authorized terms acceptance and final submission on 2 October 2026.
+
+## Submitted
+
+The complete Track 2A / FHGR entry was submitted on 2 October 2026. The official site confirmed “Submission received” and “your project is in.” The form used the reviewed short video, the final six-page report, the public repository, the 8B model and Swiss student team: No. Terms acceptance was authorized by the participant at submission time.
