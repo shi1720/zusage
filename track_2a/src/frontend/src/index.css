@@ -6,9 +6,8 @@
 @import "@fontsource/ibm-plex-mono/latin-500.css";
 
 /* ---------------------------------------------------------------------------
-   Zusage design tokens - "Wanderweg"
-   Swiss hiking-trail vernacular: signpost yellow for direction & progress,
-   red-white-red trail blazes for milestones, glacier white ground, slate ink.
+   Zusage design tokens: indigo direction, lavender accents, white cards,
+   dark ink and a restrained green scale for learning progress.
    Fonts are self-hosted (fontsource) so the app works fully air-gapped.
 --------------------------------------------------------------------------- */
 
@@ -31,11 +30,11 @@
   --color-ink-3: #626d85;
 
   /* Signal colours */
-  --color-sign: #e9e8ff; /* Wanderweg signpost yellow */
+  --color-sign: #e9e8ff; /* soft lavender */
   --color-sign-deep: #6654e8;
   --color-sign-ink: #17213c;
   --color-blaze: #d52b1e; /* red-white-red trail marker */
-  --color-fir: #16816b; /* strong / success */
+  --color-fir: #176c5b; /* success text, including tinted badges */
   --color-lake: #5643d6; /* links, interactive accents */
   --color-dusk: #7055d8; /* coach voice */
 
@@ -76,7 +75,7 @@ body {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-sign);
+  outline: 3px solid var(--color-lake);
   outline-offset: 2px;
   border-radius: 6px;
 }

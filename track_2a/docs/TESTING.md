@@ -22,6 +22,7 @@ make test
 make lint
 cd track_2a
 uv run --project src/backend python scripts/e2e.py --url https://zusage.web.app --out hosted-e2e.json
+uv run --project src/backend python scripts/e2e_workspace.py --url https://zusage.web.app --out workspace-tests.json
 ```
 
 The live suite completes interviews in all five languages and checks session isolation, budget, end reports, progress, closed-session rejection, account export and teacher consent. Backend tests cover malformed provider responses, redaction, safety pause/retry, retention, typed profile validation, CSV idempotency, draft isolation, recovery, credential encryption, scheduler authentication and analytics.
