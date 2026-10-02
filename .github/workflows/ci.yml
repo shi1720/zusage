@@ -1,0 +1,38 @@
+name: Application checks
+
+on:
+  push:
+    branches: [aperture-redesign]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: track_2a
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: track_2a/src/frontend/package-lock.json
+      - name: Backend lint and regression tests
+        run: |
+          uv sync --project src/backend --extra dev
+          uv run --project src/backend ruff check src/backend/zusage
+          uv run --project src/backend pytest src/backend/tests
+        env:
+          ZUSAGE_OFFLINE: 'true'
+      - name: Frontend tests and production build
+        working-directory: track_2a/src/frontend
+        run: |
+          npm ci
+          npm test
+          npm run build
