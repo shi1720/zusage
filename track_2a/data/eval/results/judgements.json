@@ -1,0 +1,1090 @@
+[
+ {
+  "system": "zusage",
+  "profile": "lea",
+  "language": "de",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview closely mirrors a real Swiss apprenticeship interview with appropriate formality, relevant questions, and constructive feedback; only minor improvements in candidate detail are needed."
+ },
+ {
+  "system": "zusage",
+  "profile": "lea",
+  "language": "de",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview closely mirrors a real Swiss apprenticeship selection process with appropriate formality, relevant questions, and constructive feedback tailored to a 15-year-old candidate."
+ },
+ {
+  "system": "zusage",
+  "profile": "lea",
+  "language": "de",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 3,
+   "feedback_specificity": 3,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview closely mirrors a real Swiss apprenticeship interview with appropriate formality, on-topic questions, and constructive feedback; however, adaptivity and actionability of feedback could be improved."
+ },
+ {
+  "system": "zusage",
+  "profile": "lea",
+  "language": "de",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 5,
+   "feedback_specificity": 5,
+   "feedback_actionability": 5,
+   "constructiveness": 5,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is highly realistic, with appropriate Swiss formalities and adaptive probing; feedback is specific, actionable, constructive, and strictly faithful to the transcript."
+ },
+ {
+  "system": "zusage",
+  "profile": "noah",
+  "language": "de",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview closely mirrors a real Swiss apprenticeship selection process with appropriate formality, relevant questions for a 15-year-old, and constructive feedback that is specific, actionable, and developmentally appropriate."
+ },
+ {
+  "system": "zusage",
+  "profile": "noah",
+  "language": "de",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 5,
+   "question_relevance": 5,
+   "adaptivity": 4,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is highly realistic, with natural Swiss German, polite formality, and relevant questions for a 15-year-old. Feedback is specific, actionable, and constructive, though adaptivity could improve by probing deeper when answers are vague."
+ },
+ {
+  "system": "zusage",
+  "profile": "noah",
+  "language": "de",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 3,
+   "feedback_actionability": 3,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview closely mirrors a real Swiss apprenticeship interview with appropriate formality, on-topic questions, and constructive feedback; however, feedback could be more actionable and specific to avoid repetition."
+ },
+ {
+  "system": "zusage",
+  "profile": "noah",
+  "language": "de",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 3,
+   "feedback_specificity": 5,
+   "feedback_actionability": 5,
+   "constructiveness": 5,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview closely mirrors a real Swiss apprenticeship selection process with appropriate formality, relevant questions, and constructive feedback; however, the candidate's responses lack depth and examples, highlighting the need for targeted practice."
+ },
+ {
+  "system": "zusage",
+  "profile": "elif",
+  "language": "gsw",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview closely mirrors a real Swiss apprenticeship interview with natural language, appropriate formality, and relevant questions for a 15-year-old; feedback is specific, actionable, constructive, and strictly faithful to the transcript."
+ },
+ {
+  "system": "zusage",
+  "profile": "elif",
+  "language": "gsw",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 3,
+   "feedback_actionability": 3,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and well-structured for a Swiss apprenticeship, with clear relevance and good adaptivity; feedback is constructive but could be more specific and actionable."
+ },
+ {
+  "system": "zusage",
+  "profile": "elif",
+  "language": "gsw",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 3,
+   "feedback_actionability": 3,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview closely mirrors a real Swiss apprenticeship interview with appropriate formality, relevant questions, and constructive feedback; however, feedback specificity and actionability could be improved by requiring more concrete examples."
+ },
+ {
+  "system": "zusage",
+  "profile": "elif",
+  "language": "gsw",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 3,
+   "adaptivity": 3,
+   "feedback_specificity": 3,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 4
+  },
+  "comment": "The interview mimics a real Swiss apprenticeship interview with appropriate greetings and formal register, but the candidate's vague responses limit realism; feedback is constructive and faithful to the transcript but lacks actionable steps."
+ },
+ {
+  "system": "zusage",
+  "profile": "luca",
+  "language": "it",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 5,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "Intervista ben strutturata e realistica per un contesto svizzero, con feedback costruttivi, specifici e azionabili, mantenendo un linguaggio corretto e incoraggiante."
+ },
+ {
+  "system": "zusage",
+  "profile": "luca",
+  "language": "it",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 4,
+   "adaptivity": 2,
+   "feedback_specificity": 3,
+   "feedback_actionability": 3,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "L'intervista ha un registro formale e appropriato per un contesto svizzero, ma l'adattività dell'intervistatore è limitata: ripete le stesse richieste senza approfondire le risposte vaghe del candidato. Il feedback del coach è costruttivo e basato sul testo, ma le indicazioni sono generiche e non sempre concrete per un adolescente."
+ },
+ {
+  "system": "zusage",
+  "profile": "luca",
+  "language": "it",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 3,
+   "feedback_specificity": 3,
+   "feedback_actionability": 3,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "Intervista ben strutturata e linguaggio corretto, ma l'adattività dell'intervistatore è limitata e il candidato non evolve nelle risposte nonostante i suggerimenti."
+ },
+ {
+  "system": "zusage",
+  "profile": "luca",
+  "language": "it",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 4,
+   "adaptivity": 3,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 5,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and uses appropriate Swiss formal register, but the candidate lacks concrete examples and motivation, while feedback is constructive, specific, actionable, and faithful to the transcript."
+ },
+ {
+  "system": "zusage",
+  "profile": "chloe",
+  "language": "fr",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "Entretien bien structuré et authentique, avec des questions pertinentes et un feedback constructif, spécifique et actionnable, parfaitement fidèle au contenu de l'échange."
+ },
+ {
+  "system": "zusage",
+  "profile": "chloe",
+  "language": "fr",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 5,
+   "feedback_actionability": 5,
+   "constructiveness": 5,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview closely mirrors a real Swiss apprenticeship selection process with appropriate formality, relevant questions, and adaptive follow-ups; the feedback is highly specific, actionable, constructive, and strictly grounded in the transcript."
+ },
+ {
+  "system": "zusage",
+  "profile": "chloe",
+  "language": "fr",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 3,
+   "feedback_specificity": 3,
+   "feedback_actionability": 3,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "Entretien réaliste et bien structuré, avec un feedback constructif et fidèle au discours de la candidate, mais l'adaptativité et l'actionnabilité du feedback pourraient être renforcées."
+ },
+ {
+  "system": "zusage",
+  "profile": "chloe",
+  "language": "fr",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 5,
+   "feedback_specificity": 5,
+   "feedback_actionability": 5,
+   "constructiveness": 5,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview closely mirrors a real Swiss apprenticeship selection process with formal language, relevant questions, and constructive coaching."
+ },
+ {
+  "system": "zusage",
+  "profile": "amar",
+  "language": "de",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 5,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview closely mirrors a real Swiss apprenticeship selection process with appropriate formality, relevant questions, and constructive feedback grounded in the candidate's actual responses."
+ },
+ {
+  "system": "zusage",
+  "profile": "amar",
+  "language": "de",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview closely mirrors a real Swiss apprenticeship selection process with appropriate formality, relevant questions for a 15-year-old, and constructive feedback that is specific, actionable, and developmentally appropriate."
+ },
+ {
+  "system": "zusage",
+  "profile": "amar",
+  "language": "de",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 5,
+   "question_relevance": 5,
+   "adaptivity": 4,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 5,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is highly realistic, relevant, and constructive, with excellent language and faithful feedback, though adaptivity could improve by pushing for more specific examples."
+ },
+ {
+  "system": "zusage",
+  "profile": "amar",
+  "language": "de",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 3,
+   "adaptivity": 2,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview mimics a real Swiss apprenticeship setting with appropriate greetings and formal register, but the candidate's vague responses limit realism. Feedback is highly specific, actionable, constructive, and faithful to the transcript, though interviewer adaptivity could improve with more targeted follow-ups."
+ },
+ {
+  "system": "zusage",
+  "profile": "mara",
+  "language": "de",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 5,
+   "question_relevance": 5,
+   "adaptivity": 5,
+   "feedback_specificity": 5,
+   "feedback_actionability": 5,
+   "constructiveness": 5,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is highly realistic, with natural Swiss German, appropriate formality, and relevant questions for a 15-year-old. Feedback is specific, actionable, constructive, and strictly based on the transcript."
+ },
+ {
+  "system": "zusage",
+  "profile": "mara",
+  "language": "de",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 3,
+   "feedback_specificity": 3,
+   "feedback_actionability": 3,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and polite, with relevant questions for a 15-year-old, but adaptivity could improve by pushing for more concrete examples when vague answers are given."
+ },
+ {
+  "system": "zusage",
+  "profile": "mara",
+  "language": "de",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 5,
+   "question_relevance": 5,
+   "adaptivity": 5,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 5,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is highly realistic, relevant, and well-adapted to a 15-year-old Swiss apprentice candidate, with constructive, specific, and faithful feedback in correct Swiss German."
+ },
+ {
+  "system": "zusage",
+  "profile": "mara",
+  "language": "de",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 5,
+   "feedback_actionability": 5,
+   "constructiveness": 5,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview closely mirrors a real Swiss apprenticeship selection process with appropriate formality, relevant questions for a 15-year-old, and highly specific, actionable feedback grounded entirely in the transcript."
+ },
+ {
+  "system": "zusage",
+  "profile": "giulia",
+  "language": "it",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "Intervista ben strutturata e realistica per un contesto svizzero, con feedback specifici, costruttivi e basati fedelmente sul contenuto del colloquio."
+ },
+ {
+  "system": "zusage",
+  "profile": "giulia",
+  "language": "it",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 3,
+   "adaptivity": 2,
+   "feedback_specificity": 3,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview mimics a Swiss apprenticeship setting with formal language and role-specific questions, but the candidate's vague responses limit realism. Feedback is constructive and faithful, yet actionability could be improved with clearer next steps."
+ },
+ {
+  "system": "zusage",
+  "profile": "giulia",
+  "language": "it",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 4,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "Intervista ben strutturata e realistica per un contesto svizzero, con feedback specifici, azionabili e costruttivi, sempre fedeli al contenuto del colloquio."
+ },
+ {
+  "system": "zusage",
+  "profile": "giulia",
+  "language": "it",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 2,
+   "question_relevance": 2,
+   "adaptivity": 2,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "Feedback molto specifico e costruttivo, ma l'intervista reale è poco realistica per un contesto svizzero formale e mostra scarsa adattività dell'intervistatore."
+ },
+ {
+  "system": "rules",
+  "profile": "lea",
+  "language": "de",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 3,
+   "feedback_specificity": 3,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and well-structured for a Swiss apprenticeship setting, with strong language quality and constructive feedback, though follow-up questions could be more adaptive to candidate responses."
+ },
+ {
+  "system": "rules",
+  "profile": "lea",
+  "language": "de",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 4,
+   "adaptivity": 2,
+   "feedback_specificity": 3,
+   "feedback_actionability": 3,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is polite and on-topic but lacks adaptive follow-ups; feedback is constructive and faithful but not always actionable."
+ },
+ {
+  "system": "rules",
+  "profile": "lea",
+  "language": "de",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 5,
+   "adaptivity": 4,
+   "feedback_specificity": 2,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and relevant, with excellent language and faithful feedback, but the coach's feedback lacks specificity and actionable steps."
+ },
+ {
+  "system": "rules",
+  "profile": "lea",
+  "language": "de",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 3,
+   "adaptivity": 2,
+   "feedback_specificity": 1,
+   "feedback_actionability": 1,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is polite and on-topic but lacks depth and follow-up adaptivity; feedback is generic and not actionable."
+ },
+ {
+  "system": "rules",
+  "profile": "noah",
+  "language": "de",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 3,
+   "adaptivity": 3,
+   "feedback_specificity": 3,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is polite and formal, but questions lack depth and follow-ups are generic; feedback is encouraging but actionable steps are often missing."
+ },
+ {
+  "system": "rules",
+  "profile": "noah",
+  "language": "de",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 2,
+   "feedback_specificity": 2,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and well-structured for a Swiss apprenticeship setting, but the interviewer's adaptivity and feedback quality are limited, as they repeatedly ask for concrete examples without adjusting follow-ups when the candidate repeats generic responses."
+ },
+ {
+  "system": "rules",
+  "profile": "noah",
+  "language": "de",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 3,
+   "feedback_specificity": 2,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and well-structured for a Swiss apprenticeship setting, with clear language and constructive feedback, though follow-up questions could be more adaptive and tips more actionable."
+ },
+ {
+  "system": "rules",
+  "profile": "noah",
+  "language": "de",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 3,
+   "adaptivity": 2,
+   "feedback_specificity": 1,
+   "feedback_actionability": 1,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is polite and formal but lacks depth; feedback is overly generic and fails to address the candidate's actual responses."
+ },
+ {
+  "system": "rules",
+  "profile": "elif",
+  "language": "gsw",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 3,
+   "feedback_specificity": 3,
+   "feedback_actionability": 3,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and well-structured for a Swiss apprenticeship setting, with strong language quality and constructive feedback, though adaptivity could improve with more varied follow-ups."
+ },
+ {
+  "system": "rules",
+  "profile": "elif",
+  "language": "gsw",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 2,
+   "feedback_specificity": 1,
+   "feedback_actionability": 1,
+   "constructiveness": 3,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and uses correct Swiss German, but the coach's feedback is generic and repetitive, failing to adapt to the candidate's actual responses or provide actionable steps."
+ },
+ {
+  "system": "rules",
+  "profile": "elif",
+  "language": "gsw",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 5,
+   "question_relevance": 5,
+   "adaptivity": 4,
+   "feedback_specificity": 2,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is highly realistic and well-structured for a Swiss apprenticeship setting, but the coach feedback lacks specificity and actionable steps."
+ },
+ {
+  "system": "rules",
+  "profile": "elif",
+  "language": "gsw",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 4,
+   "adaptivity": 2,
+   "feedback_specificity": 2,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is moderately realistic for a Swiss apprenticeship setting but lacks adaptive follow-ups; feedback is constructive but not always actionable."
+ },
+ {
+  "system": "rules",
+  "profile": "luca",
+  "language": "it",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 4,
+   "adaptivity": 2,
+   "feedback_specificity": 2,
+   "feedback_actionability": 2,
+   "constructiveness": 3,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is polite and on-topic but lacks depth and follow-up adaptivity; feedback is generic and not actionable enough for a 15-year-old."
+ },
+ {
+  "system": "rules",
+  "profile": "luca",
+  "language": "it",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 4,
+   "adaptivity": 2,
+   "feedback_specificity": 2,
+   "feedback_actionability": 2,
+   "constructiveness": 3,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is moderately realistic but lacks adaptive follow-ups; feedback is encouraging but often generic and not tightly tied to specific candidate responses."
+ },
+ {
+  "system": "rules",
+  "profile": "luca",
+  "language": "it",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 4,
+   "adaptivity": 3,
+   "feedback_specificity": 2,
+   "feedback_actionability": 2,
+   "constructiveness": 3,
+   "faithfulness": 4,
+   "language_quality": 5
+  },
+  "comment": "The interview is moderately realistic for a Swiss apprenticeship setting but lacks depth in follow-up questions; feedback is generic and not actionable."
+ },
+ {
+  "system": "rules",
+  "profile": "luca",
+  "language": "it",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 2,
+   "question_relevance": 3,
+   "adaptivity": 2,
+   "feedback_specificity": 1,
+   "feedback_actionability": 1,
+   "constructiveness": 3,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is too brief and lacks depth for a realistic Swiss apprenticeship evaluation; feedback is generic and not tied to specific transcript moments."
+ },
+ {
+  "system": "rules",
+  "profile": "chloe",
+  "language": "fr",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 3,
+   "adaptivity": 3,
+   "feedback_specificity": 3,
+   "feedback_actionability": 3,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "Overall solid but room for improvement in depth and specificity; feedback is constructive and faithful to the transcript."
+ },
+ {
+  "system": "rules",
+  "profile": "chloe",
+  "language": "fr",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 2,
+   "feedback_specificity": 2,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and language is correct, but the interviewer's adaptivity and feedback specificity are limited due to the candidate's repetitive, vague answers."
+ },
+ {
+  "system": "rules",
+  "profile": "chloe",
+  "language": "fr",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 5,
+   "question_relevance": 5,
+   "adaptivity": 4,
+   "feedback_specificity": 4,
+   "feedback_actionability": 4,
+   "constructiveness": 5,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview closely mirrors a real Swiss apprenticeship selection process with natural, polite, formal language and on-topic questions appropriate for a 15-year-old."
+ },
+ {
+  "system": "rules",
+  "profile": "chloe",
+  "language": "fr",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 2,
+   "question_relevance": 3,
+   "adaptivity": 1,
+   "feedback_specificity": 1,
+   "feedback_actionability": 1,
+   "constructiveness": 5,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is unrealistic for a real Swiss apprenticeship selection (no probing follow-ups, generic questions), but the feedback is consistently constructive, specific to the transcript, and actionable."
+ },
+ {
+  "system": "rules",
+  "profile": "amar",
+  "language": "de",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 3,
+   "adaptivity": 3,
+   "feedback_specificity": 2,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is moderately realistic for a Swiss apprenticeship setting but lacks depth in probing; feedback is encouraging but often generic and repetitive."
+ },
+ {
+  "system": "rules",
+  "profile": "amar",
+  "language": "de",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 2,
+   "feedback_specificity": 2,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and uses correct Swiss German; however, the interviewer's adaptivity and feedback specificity are limited, as they repeatedly ask for concrete examples without adjusting follow-ups based on candidate responses."
+ },
+ {
+  "system": "rules",
+  "profile": "amar",
+  "language": "de",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 5,
+   "adaptivity": 4,
+   "feedback_specificity": 2,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and relevant, with excellent language and faithful feedback, but the coach's feedback lacks specificity and actionable steps."
+ },
+ {
+  "system": "rules",
+  "profile": "amar",
+  "language": "de",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 3,
+   "adaptivity": 1,
+   "feedback_specificity": 1,
+   "feedback_actionability": 1,
+   "constructiveness": 5,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is polite and formal but lacks realistic probing; feedback is uniformly generic and not tied to the transcript."
+ },
+ {
+  "system": "rules",
+  "profile": "mara",
+  "language": "de",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 4,
+   "adaptivity": 3,
+   "feedback_specificity": 3,
+   "feedback_actionability": 3,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and well-structured for a Swiss apprenticeship setting, with strong language quality and constructive feedback, though adaptivity could be improved with more nuanced follow-ups."
+ },
+ {
+  "system": "rules",
+  "profile": "mara",
+  "language": "de",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 4,
+   "adaptivity": 2,
+   "feedback_specificity": 2,
+   "feedback_actionability": 2,
+   "constructiveness": 3,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is polite and on-topic but lacks adaptive follow-ups; feedback is generic and not actionable."
+ },
+ {
+  "system": "rules",
+  "profile": "mara",
+  "language": "de",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 5,
+   "adaptivity": 4,
+   "feedback_specificity": 3,
+   "feedback_actionability": 2,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and well-structured for a Swiss apprenticeship setting, with excellent language and faithful feedback, though some coaching tips lack actionable steps."
+ },
+ {
+  "system": "rules",
+  "profile": "mara",
+  "language": "de",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 3,
+   "adaptivity": 2,
+   "feedback_specificity": 1,
+   "feedback_actionability": 1,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is polite and uses correct Swiss German, but the interviewer's follow-ups are repetitive and fail to adapt to the candidate's vague answers, while the feedback lacks specificity and actionable steps."
+ },
+ {
+  "system": "rules",
+  "profile": "giulia",
+  "language": "it",
+  "schedule": "nervous_then_warm",
+  "scores": {
+   "interview_realism": 3,
+   "question_relevance": 4,
+   "adaptivity": 2,
+   "feedback_specificity": 2,
+   "feedback_actionability": 2,
+   "constructiveness": 3,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is polite and on-topic but lacks depth and follow-up adaptivity; feedback is generic and not actionable enough for a 15-year-old."
+ },
+ {
+  "system": "rules",
+  "profile": "giulia",
+  "language": "it",
+  "schedule": "steady",
+  "scores": {
+   "interview_realism": 2,
+   "question_relevance": 3,
+   "adaptivity": 2,
+   "feedback_specificity": 1,
+   "feedback_actionability": 1,
+   "constructiveness": 3,
+   "faithfulness": 4,
+   "language_quality": 4
+  },
+  "comment": "The interview is somewhat realistic but lacks depth and genuine Swiss professionalism; feedback is generic and not actionable."
+ },
+ {
+  "system": "rules",
+  "profile": "giulia",
+  "language": "it",
+  "schedule": "strong",
+  "scores": {
+   "interview_realism": 4,
+   "question_relevance": 5,
+   "adaptivity": 4,
+   "feedback_specificity": 3,
+   "feedback_actionability": 3,
+   "constructiveness": 4,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is realistic and well-structured for a Swiss apprenticeship, with clear language and relevant questions; feedback is constructive but could be more specific and actionable."
+ },
+ {
+  "system": "rules",
+  "profile": "giulia",
+  "language": "it",
+  "schedule": "struggling",
+  "scores": {
+   "interview_realism": 2,
+   "question_relevance": 3,
+   "adaptivity": 2,
+   "feedback_specificity": 1,
+   "feedback_actionability": 1,
+   "constructiveness": 3,
+   "faithfulness": 5,
+   "language_quality": 5
+  },
+  "comment": "The interview is too brief and lacks depth typical of a real Swiss apprenticeship interview; feedback is generic and not tailored to the transcript."
+ }
+]

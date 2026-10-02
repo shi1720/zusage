@@ -1,0 +1,350 @@
+{
+  "model": "apertus-v1.5-8b",
+  "calibration": {
+    "naive": {
+      "n": 114,
+      "valid_rate": 1.0,
+      "spearman": 0.841,
+      "spearman_ci95": [
+        0.766,
+        0.891
+      ],
+      "pairwise_accuracy": 0.868,
+      "mean_by_level": {
+        "weak": 1.43,
+        "solid": 2.26,
+        "strong": 3.36
+      },
+      "evidence_grounded_rate": 0.0,
+      "feedback_language_ok": 0.684,
+      "per_language": {
+        "de": {
+          "n": 36,
+          "spearman": 0.839,
+          "mean_by_level": {
+            "weak": 1.58,
+            "solid": 2.35,
+            "strong": 3.53
+          }
+        },
+        "en": {
+          "n": 12,
+          "spearman": 0.941,
+          "mean_by_level": {
+            "weak": 1.17,
+            "solid": 2.08,
+            "strong": 3.62
+          }
+        },
+        "fr": {
+          "n": 27,
+          "spearman": 0.857,
+          "mean_by_level": {
+            "weak": 1.3,
+            "solid": 2.26,
+            "strong": 3.3
+          }
+        },
+        "gsw": {
+          "n": 12,
+          "spearman": 0.665,
+          "mean_by_level": {
+            "weak": 1.79,
+            "solid": 2.17,
+            "strong": 2.67
+          }
+        },
+        "it": {
+          "n": 27,
+          "spearman": 0.867,
+          "mean_by_level": {
+            "weak": 1.33,
+            "solid": 2.26,
+            "strong": 3.41
+          }
+        }
+      },
+      "consistency_spread": 0.276,
+      "calls": 114,
+      "avg_latency_ms": 1625,
+      "avg_tokens_in": 151,
+      "avg_tokens_out": 240
+    },
+    "rules": {
+      "n": 114,
+      "valid_rate": 1.0,
+      "spearman": 0.77,
+      "spearman_ci95": [
+        0.696,
+        0.833
+      ],
+      "pairwise_accuracy": 0.807,
+      "mean_by_level": {
+        "weak": 1.21,
+        "solid": 1.84,
+        "strong": 2.98
+      },
+      "evidence_grounded_rate": 1.0,
+      "feedback_language_ok": 1.0,
+      "per_language": {
+        "de": {
+          "n": 36,
+          "spearman": 0.743,
+          "mean_by_level": {
+            "weak": 1.17,
+            "solid": 1.93,
+            "strong": 2.85
+          }
+        },
+        "en": {
+          "n": 12,
+          "spearman": 0.835,
+          "mean_by_level": {
+            "weak": 1.25,
+            "solid": 1.79,
+            "strong": 3.21
+          }
+        },
+        "fr": {
+          "n": 27,
+          "spearman": 0.772,
+          "mean_by_level": {
+            "weak": 1.28,
+            "solid": 1.96,
+            "strong": 3.06
+          }
+        },
+        "gsw": {
+          "n": 12,
+          "spearman": 0.665,
+          "mean_by_level": {
+            "weak": 1.25,
+            "solid": 1.5,
+            "strong": 2.54
+          }
+        },
+        "it": {
+          "n": 27,
+          "spearman": 0.812,
+          "mean_by_level": {
+            "weak": 1.17,
+            "solid": 1.78,
+            "strong": 3.19
+          }
+        }
+      },
+      "consistency_spread": 0.17,
+      "calls": 0,
+      "avg_latency_ms": 0,
+      "avg_tokens_in": 0,
+      "avg_tokens_out": 0
+    },
+    "zusage": {
+      "n": 114,
+      "valid_rate": 1.0,
+      "spearman": 0.812,
+      "spearman_ci95": [
+        0.746,
+        0.867
+      ],
+      "pairwise_accuracy": 0.868,
+      "mean_by_level": {
+        "weak": 1.48,
+        "solid": 1.94,
+        "strong": 2.81
+      },
+      "evidence_grounded_rate": 0.965,
+      "feedback_language_ok": 1.0,
+      "per_language": {
+        "de": {
+          "n": 36,
+          "spearman": 0.83,
+          "mean_by_level": {
+            "weak": 1.4,
+            "solid": 1.96,
+            "strong": 2.81
+          }
+        },
+        "en": {
+          "n": 12,
+          "spearman": 0.726,
+          "mean_by_level": {
+            "weak": 1.71,
+            "solid": 1.71,
+            "strong": 3.04
+          }
+        },
+        "fr": {
+          "n": 27,
+          "spearman": 0.83,
+          "mean_by_level": {
+            "weak": 1.56,
+            "solid": 2.07,
+            "strong": 2.85
+          }
+        },
+        "gsw": {
+          "n": 12,
+          "spearman": 0.607,
+          "mean_by_level": {
+            "weak": 1.62,
+            "solid": 1.58,
+            "strong": 2.54
+          }
+        },
+        "it": {
+          "n": 27,
+          "spearman": 0.87,
+          "mean_by_level": {
+            "weak": 1.35,
+            "solid": 2.06,
+            "strong": 2.78
+          }
+        }
+      },
+      "consistency_spread": 0.263,
+      "calls": 114,
+      "avg_latency_ms": 1397,
+      "avg_tokens_in": 1648,
+      "avg_tokens_out": 196
+    }
+  },
+  "adversarial": {
+    "naive": {
+      "n": 30,
+      "accuracy": 0.733,
+      "by_kind": {
+        "attitude": 1.0,
+        "cliche": 0.0,
+        "concise": 0.88,
+        "dialect": 0.5,
+        "keywords": 1.0,
+        "l2": 0.5,
+        "off_topic": 1.0,
+        "rambling": 0.25
+      },
+      "mean_weak": 1.83,
+      "mean_strong": 2.88
+    },
+    "rules": {
+      "n": 30,
+      "accuracy": 0.467,
+      "by_kind": {
+        "attitude": 0.8,
+        "cliche": 0.0,
+        "concise": 0.5,
+        "dialect": 1.0,
+        "keywords": 0.25,
+        "l2": 1.0,
+        "off_topic": 0.33,
+        "rambling": 0.0
+      },
+      "mean_weak": 2.63,
+      "mean_strong": 2.51
+    },
+    "zusage": {
+      "n": 30,
+      "accuracy": 0.933,
+      "by_kind": {
+        "attitude": 1.0,
+        "cliche": 0.5,
+        "concise": 0.88,
+        "dialect": 1.0,
+        "keywords": 1.0,
+        "l2": 1.0,
+        "off_topic": 1.0,
+        "rambling": 1.0
+      },
+      "mean_weak": 1.77,
+      "mean_strong": 2.93
+    }
+  },
+  "interviews": {
+    "zusage": {
+      "n": 32,
+      "calls_per_answer": 1.11,
+      "max_calls_per_answer": 1.14,
+      "avg_model_latency_ms": 1486,
+      "interviewer_language_ok": 1.0,
+      "flow_ok_rate": 1.0,
+      "followups_per_interview": 2.81,
+      "degraded_turn_rate": 0.0,
+      "illegal_topic_hits": 0,
+      "overall_by_schedule": {
+        "nervous_then_warm": 32,
+        "steady": 32.2,
+        "strong": 53.5,
+        "struggling": 18.5
+      },
+      "overall_by_language": {
+        "de": 34.5,
+        "gsw": 32.2,
+        "it": 34,
+        "fr": 34.2
+      }
+    },
+    "rules": {
+      "n": 32,
+      "calls_per_answer": 0.0,
+      "max_calls_per_answer": 0.0,
+      "avg_model_latency_ms": 0,
+      "interviewer_language_ok": 1.0,
+      "flow_ok_rate": 1.0,
+      "followups_per_interview": 1.75,
+      "degraded_turn_rate": 0.0,
+      "illegal_topic_hits": 0,
+      "overall_by_schedule": {
+        "nervous_then_warm": 29.4,
+        "steady": 30.8,
+        "strong": 62.1,
+        "struggling": 8.2
+      },
+      "overall_by_language": {
+        "de": 34.9,
+        "gsw": 28.8,
+        "it": 30.5,
+        "fr": 31.5
+      }
+    }
+  },
+  "judge": {
+    "model": "apertus-v1.5-70b",
+    "results": {
+      "rules": {
+        "interview_realism": 3.41,
+        "question_relevance": 3.84,
+        "adaptivity": 2.56,
+        "feedback_specificity": 2.03,
+        "feedback_actionability": 1.94,
+        "constructiveness": 3.81,
+        "faithfulness": 4.94,
+        "language_quality": 4.97,
+        "overall": 3.44,
+        "by_language": {
+          "de": 3.49,
+          "gsw": 3.59,
+          "it": 3.14,
+          "fr": 3.66
+        }
+      },
+      "zusage": {
+        "interview_realism": 3.94,
+        "question_relevance": 3.97,
+        "adaptivity": 3.66,
+        "feedback_specificity": 3.88,
+        "feedback_actionability": 3.78,
+        "constructiveness": 4.31,
+        "faithfulness": 5,
+        "language_quality": 4.97,
+        "overall": 4.19,
+        "by_language": {
+          "de": 4.34,
+          "gsw": 3.91,
+          "it": 3.92,
+          "fr": 4.38
+        }
+      }
+    }
+  },
+  "generated_at": "2026-10-01T22:56:56"
+}

@@ -1,0 +1,527 @@
+# Probelauf occupation catalogue (Swiss VET / Berufsbildung)
+# ---------------------------------------------------------------------------
+# 12 of the most chosen Swiss apprenticeships (EFZ = 3-4 yr Federal VET
+# Diploma / CFC / AFC; EBA = 2 yr Federal VET Certificate / AFP / CFP).
+# Official occupation titles in DE / FR / IT follow berufsberatung.ch /
+# orientation.ch / orientamento.ch.
+#
+# Each occupation carries:
+#   - competencies: what Swiss training companies look for (used to tailor
+#                   feedback and to judge relevance)
+#   - company:      a FICTIONAL training company (all names invented) with a closed fact base.
+#                   When the candidate asks questions, the interviewer may
+#                   answer ONLY from these facts (anti-hallucination design).
+#   - questions:    occupation-specific questions, merged by the planner.
+#
+# Teachers / career counsellors can add occupations by appending to this file
+# or by pasting a real job ad in the UI (free-text "job posting" field).
+version: "1.2"
+
+occupations:
+  - id: kaufmann_efz
+    level: EFZ
+    field: business
+    icon: briefcase
+    name:
+      de: "Kauffrau / Kaufmann EFZ"
+      fr: "Employée / Employé de commerce CFC"
+      it: "Impiegata / Impiegato di commercio AFC"
+      en: "Commercial Employee (EFZ)"
+    competencies: [organisation, reliability, customer orientation, written communication, MS Office, languages]
+    company:
+      name: "Rhätia Treuhand AG"
+      town: "Chur"
+      facts:
+        - "Fiduciary and accounting firm with 38 employees in Chur."
+        - "We train 4 commercial apprentices; they rotate through accounting, payroll, reception and HR."
+        - "Vocational school is 1.5 days per week at the KV Chur (kaufmännische Berufsschule)."
+        - "Apprentices can do the Berufsmaturität (BM1) during the apprenticeship if school grades allow."
+        - "Working hours 07:45-17:00 with flexible lunch; apprentices get a half-fare travelcard (Halbtax)."
+    questions:
+      - id: kv_tasks
+        phase: motivation
+        difficulty: 2
+        targets: [relevance, motivation]
+        probe: "Ask which of these tasks they would enjoy most and why."
+        text:
+          de: "Was glauben Sie, macht eine kaufmännische Lernende bei uns den ganzen Tag?"
+          fr: "À votre avis, que fait un·e apprenti·e employé·e de commerce chez nous toute la journée ?"
+          it: "Secondo lei, cosa fa tutto il giorno un'apprendista impiegata di commercio da noi?"
+          en: "What do you think a commercial apprentice does all day at our company?"
+          gsw: "Was glaubed Sie, was macht e KV-Lernendi bi üs de ganz Tag?"
+      - id: kv_angry_customer
+        phase: situational
+        difficulty: 3
+        targets: [communication, examples, relevance]
+        probe: "Ask what exactly they would say to the customer."
+        text:
+          de: "Ein Kunde ruft verärgert an, weil seine Rechnung falsch ist, und Ihre Chefin ist nicht da. Was machen Sie?"
+          fr: "Un client appelle, fâché, parce que sa facture est fausse, et votre cheffe est absente. Que faites-vous ?"
+          it: "Un cliente chiama arrabbiato perché la sua fattura è sbagliata e la sua responsabile non c'è. Cosa fa?"
+          en: "An angry customer calls because their invoice is wrong, and your boss is out. What do you do?"
+          gsw: "En Chund lüütet verärgeret aa, will sini Rächnig falsch isch, und Ihri Chefin isch nöd da. Was mached Sie?"
+
+  - id: fage_efz
+    level: EFZ
+    field: health
+    icon: heart-pulse
+    name:
+      de: "Fachfrau / Fachmann Gesundheit EFZ"
+      fr: "Assistante / Assistant en soins et santé communautaire CFC"
+      it: "Operatrice / Operatore sociosanitario AFC"
+      en: "Healthcare Assistant (EFZ)"
+    competencies: [empathy, resilience, hygiene, teamwork, reliability, discretion]
+    company:
+      name: "Spital Limmattal-Ost"
+      town: "Zürich"
+      facts:
+        - "Regional hospital with 420 employees; 18 healthcare apprentices (FaGe) per year."
+        - "Apprentices rotate between surgery, internal medicine and the care home ward."
+        - "Shift work starts in the 2nd year; no night shifts for apprentices under 18."
+        - "A dedicated vocational trainer (Berufsbildnerin) supports apprentices every week."
+        - "Vocational school 1-2 days per week; BM2 after the apprenticeship is supported."
+    questions:
+      - id: fage_why_care
+        phase: motivation
+        difficulty: 2
+        targets: [motivation, examples]
+        probe: "Ask whether they have cared for someone before (grandparents, siblings, Schnupperlehre)."
+        text:
+          de: "In der Pflege arbeitet man nahe mit Menschen, auch wenn es ihnen schlecht geht. Was zieht Sie an diesem Beruf an?"
+          fr: "Dans les soins, on travaille au plus près des gens, même quand ils vont mal. Qu'est-ce qui vous attire dans ce métier ?"
+          it: "Nelle cure si lavora a stretto contatto con le persone, anche quando stanno male. Cosa la attira di questa professione?"
+          en: "In care you work closely with people, even when they are unwell. What attracts you to this job?"
+          gsw: "I de Pfleg schaffet mer nöch mit Mänsche, au wenn's ene schlächt gaht. Was gfallt Ihne a dem Bruef?"
+      - id: fage_refuses
+        phase: situational
+        difficulty: 3
+        targets: [communication, self_awareness, relevance]
+        probe: "Ask how they would stay calm and whom they would inform."
+        text:
+          de: "Eine ältere Patientin will ihre Medikamente nicht nehmen und wird laut. Wie reagieren Sie?"
+          fr: "Une patiente âgée refuse de prendre ses médicaments et commence à crier. Comment réagissez-vous ?"
+          it: "Una paziente anziana non vuole prendere i farmaci e alza la voce. Come reagisce?"
+          en: "An elderly patient refuses her medication and starts shouting. How do you react?"
+          gsw: "En älteri Patientin wott ihri Medikament nöd näh und wird luut. Wie reagiered Sie?"
+
+  - id: detailhandel_efz
+    level: EFZ
+    field: retail
+    icon: shopping-bag
+    name:
+      de: "Detailhandelsfachfrau / Detailhandelsfachmann EFZ"
+      fr: "Gestionnaire du commerce de détail CFC"
+      it: "Impiegata / Impiegato del commercio al dettaglio AFC"
+      en: "Retail Specialist (EFZ)"
+    competencies: [customer service, friendliness, product interest, resilience, teamwork, punctuality]
+    company:
+      name: "Velo & Sport Aare GmbH"
+      town: "Bern"
+      facts:
+        - "Bike and outdoor sports shop with 22 employees and its own repair workshop."
+        - "Apprentices learn sales, product advice, cash desk and stock management."
+        - "Focus 'Beraten' (customer advice) - apprentices run their own product corner in year 3."
+        - "Saturday work is part of the job; apprentices get a weekday off instead."
+        - "Staff discount of 30% on bikes and equipment."
+    questions:
+      - id: dh_sell
+        phase: situational
+        difficulty: 2
+        targets: [communication, relevance, examples]
+        probe: "Ask which questions they would ask the customer first."
+        text:
+          de: "Eine Kundin weiss nicht, welches Velo sie kaufen soll. Wie beraten Sie sie?"
+          fr: "Une cliente ne sait pas quel vélo acheter. Comment la conseillez-vous ?"
+          it: "Una cliente non sa quale bicicletta comprare. Come la consiglia?"
+          en: "A customer doesn't know which bike to buy. How do you advise her?"
+          gsw: "E Chundin weiss nöd, weles Velo sie söll chaufe. Wie berated Sie sie?"
+      - id: dh_saturday
+        phase: motivation
+        difficulty: 2
+        targets: [motivation, self_awareness]
+        probe: "Ask how they would organise their free time and hobbies around it."
+        text:
+          de: "Im Detailhandel arbeitet man auch am Samstag. Wie stehen Sie dazu?"
+          fr: "Dans le commerce de détail, on travaille aussi le samedi. Qu'en pensez-vous ?"
+          it: "Nel commercio al dettaglio si lavora anche il sabato. Cosa ne pensa?"
+          en: "In retail you also work on Saturdays. How do you feel about that?"
+          gsw: "Im Detailhandel schaffet mer au am Samschtig. Wie gsehnd Sie das?"
+
+  - id: informatik_efz
+    level: EFZ
+    field: ict
+    icon: laptop
+    name:
+      de: "Informatikerin / Informatiker EFZ"
+      fr: "Informaticienne / Informaticien CFC"
+      it: "Informatica / Informatico AFC"
+      en: "IT Specialist (EFZ)"
+    competencies: [logical thinking, curiosity, persistence, teamwork, English, explaining tech simply]
+    company:
+      name: "Alpina Software AG"
+      town: "St. Gallen"
+      facts:
+        - "Software company with 120 employees building apps for Swiss public transport."
+        - "Apprentices specialise in application development (Applikationsentwicklung)."
+        - "First year in our own apprentice lab, then real projects in agile teams."
+        - "Each apprentice gets a laptop and a mentor; hybrid work possible from year 2."
+        - "We support BM1 and later studies at a university of applied sciences (FH)."
+    questions:
+      - id: it_project
+        phase: motivation
+        difficulty: 2
+        targets: [examples, motivation, clarity]
+        probe: "Ask what was the hardest problem and how they solved it."
+        text:
+          de: "Haben Sie schon einmal selbst etwas programmiert oder gebastelt, zum Beispiel ein Spiel oder eine Website? Erzählen Sie!"
+          fr: "Avez-vous déjà programmé ou bricolé quelque chose vous-même, par exemple un jeu ou un site web ? Racontez-moi !"
+          it: "Ha già programmato o creato qualcosa da solo/a, per esempio un gioco o un sito web? Mi racconti!"
+          en: "Have you ever programmed or built something yourself, like a game or a website? Tell me about it!"
+          gsw: "Händ Sie scho mal sälber öppis programmiert oder baschtlet, zum Bispiel es Spiel oder e Websiite? Verzelled Sie!"
+      - id: it_explain
+        phase: situational
+        difficulty: 3
+        targets: [communication, clarity]
+        probe: "Ask them to try a simple analogy."
+        text:
+          de: "Ihre Grossmutter fragt Sie, was 'die Cloud' ist. Wie erklären Sie es ihr?"
+          fr: "Votre grand-mère vous demande ce qu'est « le cloud ». Comment le lui expliquez-vous ?"
+          it: "Sua nonna le chiede che cos'è «il cloud». Come glielo spiega?"
+          en: "Your grandmother asks you what 'the cloud' is. How do you explain it to her?"
+          gsw: "Ihri Grossmuetter fragt Sie, was 'd'Cloud' isch. Wie erkläred Sie ihre das?"
+
+  - id: fabe_efz
+    level: EFZ
+    field: social
+    icon: baby
+    name:
+      de: "Fachfrau / Fachmann Betreuung EFZ (Kinder)"
+      fr: "Assistante socio-éducative / Assistant socio-éducatif CFC"
+      it: "Operatrice / Operatore socioassistenziale AFC"
+      en: "Childcare Worker (EFZ)"
+    competencies: [patience, empathy, creativity, reliability, communication with parents, teamwork]
+    company:
+      name: "Kita Sunnehuus"
+      town: "Luzern"
+      facts:
+        - "Daycare centre with 3 groups (babies, toddlers, kindergarten age) and 16 staff."
+        - "Apprentices plan their own small activities from the 2nd year on."
+        - "Close cooperation with parents; apprentices join parent talks in year 3."
+        - "Vocational school 1-2 days per week in Luzern."
+    questions:
+      - id: fabe_activity
+        phase: situational
+        difficulty: 2
+        targets: [examples, relevance, motivation]
+        probe: "Ask how they would adapt it for younger or shy children."
+        text:
+          de: "Es regnet und die Kinder sind unruhig. Welche Aktivität würden Sie mit ihnen machen?"
+          fr: "Il pleut et les enfants sont agités. Quelle activité feriez-vous avec eux ?"
+          it: "Piove e i bambini sono irrequieti. Quale attività farebbe con loro?"
+          en: "It's raining and the children are restless. What activity would you do with them?"
+          gsw: "Es rägnet und d'Chind sind unruehig. Weli Aktivität würded Sie mit ene mache?"
+      - id: fabe_parents
+        phase: situational
+        difficulty: 3
+        targets: [communication, self_awareness]
+        probe: "Ask whom they would involve from the team."
+        text:
+          de: "Ein Vater ist unzufrieden, weil sein Kind beim Abholen schmutzige Kleider hat. Was sagen Sie?"
+          fr: "Un père est mécontent parce que son enfant a des vêtements sales quand il vient le chercher. Que lui dites-vous ?"
+          it: "Un papà è scontento perché, quando viene a prenderlo, suo figlio ha i vestiti sporchi. Cosa gli dice?"
+          en: "A father is unhappy because his child has dirty clothes at pick-up. What do you say?"
+          gsw: "En Vatter isch unzfride, will sis Chind bim Abhole dräckigi Chleider hät. Was säged Sie?"
+
+  - id: elektro_efz
+    level: EFZ
+    field: technology
+    icon: zap
+    name:
+      de: "Elektroinstallateurin / Elektroinstallateur EFZ"
+      fr: "Installatrice-électricienne / Installateur-électricien CFC"
+      it: "Installatrice / Installatore elettricista AFC"
+      en: "Electrician (EFZ)"
+    competencies: [safety awareness, precision, maths, physical fitness, teamwork, reliability]
+    company:
+      name: "Elektro Brunner AG"
+      town: "Winterthur"
+      facts:
+        - "Electrical installation company with 55 employees, active in new builds, renovations and solar systems."
+        - "Apprentices work on construction sites with an experienced installer from day one."
+        - "Safety training (PSA, 5 safety rules) in the first month."
+        - "Own work clothes and tools provided; overtime is compensated."
+    questions:
+      - id: el_safety
+        phase: situational
+        difficulty: 3
+        targets: [self_awareness, relevance, communication]
+        probe: "Ask why safety rules matter even when it slows down the work."
+        text:
+          de: "Ein Mitarbeiter sagt Ihnen, Sie sollen schnell ohne Abschalten an einer Leitung arbeiten. Was tun Sie?"
+          fr: "Un collègue vous dit de travailler vite sur une ligne sans couper le courant. Que faites-vous ?"
+          it: "Un collega le dice di lavorare velocemente su una linea senza staccare la corrente. Cosa fa?"
+          en: "A colleague tells you to quickly work on a cable without switching off the power. What do you do?"
+          gsw: "En Mitarbeiter seit Ihne, Sie söled schnäll ohni Abschalte anere Leitig schaffe. Was mached Sie?"
+      - id: el_hands
+        phase: motivation
+        difficulty: 2
+        targets: [motivation, examples]
+        probe: "Ask for something they built or repaired at home."
+        text:
+          de: "Was gefällt Ihnen daran, mit den Händen zu arbeiten? Haben Sie schon einmal etwas repariert?"
+          fr: "Qu'est-ce qui vous plaît dans le travail manuel ? Avez-vous déjà réparé quelque chose ?"
+          it: "Cosa le piace del lavoro manuale? Ha già riparato qualcosa?"
+          en: "What do you like about working with your hands? Have you ever repaired something?"
+          gsw: "Was gfallt Ihne dra, mit de Händ z'schaffe? Händ Sie scho mal öppis flickt?"
+
+  - id: polymech_efz
+    level: EFZ
+    field: technology
+    icon: cog
+    name:
+      de: "Polymechanikerin / Polymechaniker EFZ"
+      fr: "Polymécanicienne / Polymécanicien CFC"
+      it: "Polimeccanica / Polimeccanico AFC"
+      en: "Polymechanic (EFZ)"
+    competencies: [precision, technical understanding, spatial thinking, patience, maths, care]
+    company:
+      name: "Präzisa Werke AG"
+      town: "Basel"
+      facts:
+        - "Precision engineering company with 260 employees supplying the medtech and pharma industry."
+        - "Basic training in our own apprentice workshop (Lehrwerkstatt) with 25 apprentices."
+        - "Apprentices learn turning, milling, CNC programming and assembly."
+        - "Top apprentices may compete in SwissSkills."
+    questions:
+      - id: poly_precision
+        phase: situational
+        difficulty: 3
+        targets: [self_awareness, examples, relevance]
+        probe: "Ask how they check their own work."
+        text:
+          de: "Sie haben ein Teil gefräst und merken, dass es 0,2 Millimeter zu klein ist. Was machen Sie?"
+          fr: "Vous avez fraisé une pièce et vous remarquez qu'elle est trop petite de 0,2 millimètre. Que faites-vous ?"
+          it: "Ha fresato un pezzo e si accorge che è più piccolo di 0,2 millimetri. Cosa fa?"
+          en: "You milled a part and notice it is 0.2 millimetres too small. What do you do?"
+          gsw: "Sie händ es Teil gfräst und merked, dass es 0,2 Millimeter z'chli isch. Was mached Sie?"
+      - id: poly_tech
+        phase: motivation
+        difficulty: 2
+        targets: [motivation, examples]
+        probe: "Ask what fascinates them about how machines work."
+        text:
+          de: "Was interessiert Sie an Technik und Maschinen?"
+          fr: "Qu'est-ce qui vous intéresse dans la technique et les machines ?"
+          it: "Cosa la interessa della tecnica e delle macchine?"
+          en: "What interests you about technology and machines?"
+          gsw: "Was interessiert Sie a Technik und Maschine?"
+
+  - id: koch_efz
+    level: EFZ
+    field: hospitality
+    icon: chef-hat
+    name:
+      de: "Köchin / Koch EFZ"
+      fr: "Cuisinière / Cuisinier CFC"
+      it: "Cuoca / Cuoco AFC"
+      en: "Cook (EFZ)"
+    competencies: [stress resistance, hygiene, teamwork, creativity, punctuality, physical stamina]
+    company:
+      name: "Hotel Lago Ceresio"
+      town: "Lugano"
+      facts:
+        - "4-star hotel with a restaurant (60 seats) and a terrace; 14 kitchen staff."
+        - "Apprentices work in all stations: entremetier, saucier, pâtisserie."
+        - "Split shifts are common; two days off per week."
+        - "Meals during work are free; apprentices take part in internal cooking competitions."
+    questions:
+      - id: koch_rush
+        phase: situational
+        difficulty: 3
+        targets: [self_awareness, examples, communication]
+        probe: "Ask how they keep calm when many orders come at once."
+        text:
+          de: "Samstagabend, das Restaurant ist voll und es kommen zehn Bestellungen gleichzeitig. Wie gehen Sie damit um?"
+          fr: "Samedi soir, le restaurant est plein et dix commandes arrivent en même temps. Comment gérez-vous la situation ?"
+          it: "Sabato sera, il ristorante è pieno e arrivano dieci ordinazioni contemporaneamente. Come gestisce la situazione?"
+          en: "Saturday night, the restaurant is full and ten orders come in at once. How do you handle it?"
+          gsw: "Samschtignacht, s'Restaurant isch volle und es chömed zäh Bstellige gliichziitig. Wie gönd Sie damit um?"
+      - id: koch_dish
+        phase: motivation
+        difficulty: 1
+        targets: [motivation, examples, clarity]
+        probe: "Ask what they would change to make the dish their own."
+        text:
+          de: "Welches Gericht kochen Sie am liebsten, und warum?"
+          fr: "Quel plat aimez-vous le plus cuisiner, et pourquoi ?"
+          it: "Qual è il piatto che le piace di più cucinare, e perché?"
+          en: "Which dish do you like cooking most, and why?"
+          gsw: "Weles Gricht chochet Sie am liebschte, und wieso?"
+
+  - id: logistik_eba
+    level: EBA
+    field: logistics
+    icon: package
+    name:
+      de: "Logistikerin / Logistiker EBA"
+      fr: "Logisticienne / Logisticien AFP"
+      it: "Addetta / Addetto alla logistica CFP"
+      en: "Logistics Worker (EBA)"
+    competencies: [reliability, carefulness, physical fitness, teamwork, punctuality, safety]
+    company:
+      name: "Transalpin Logistik AG"
+      town: "Bellinzona"
+      facts:
+        - "Logistics centre with 90 employees, storing and shipping goods for Swiss retailers."
+        - "Apprentices learn receiving goods, storage, picking and shipping; forklift licence included."
+        - "Very good apprentices can move on to the 3-year Logistiker EFZ afterwards."
+        - "Start of work 06:30; work clothes and safety shoes provided."
+    questions:
+      - id: log_careful
+        phase: situational
+        difficulty: 2
+        targets: [self_awareness, communication]
+        probe: "Ask why it matters to report it immediately."
+        text:
+          de: "Sie merken, dass ein Paket beim Ausladen beschädigt wurde. Was machen Sie?"
+          fr: "Vous remarquez qu'un colis a été endommagé pendant le déchargement. Que faites-vous ?"
+          it: "Si accorge che un pacco è stato danneggiato durante lo scarico. Cosa fa?"
+          en: "You notice a package was damaged while unloading. What do you do?"
+          gsw: "Sie merked, dass es Päckli bim Uslade beschädigt worde isch. Was mached Sie?"
+      - id: log_early
+        phase: motivation
+        difficulty: 1
+        targets: [motivation, self_awareness]
+        probe: "Ask how they make sure they are always on time."
+        text:
+          de: "Arbeitsbeginn ist um 6:30 Uhr. Wie stellen Sie sicher, dass Sie pünktlich sind?"
+          fr: "Le travail commence à 6 h 30. Comment faites-vous pour être toujours à l'heure ?"
+          it: "Il lavoro inizia alle 6:30. Come si assicura di essere puntuale?"
+          en: "Work starts at 6:30 am. How do you make sure you are on time?"
+          gsw: "Arbetsbeginn isch am halbi sibni. Wie lueged Sie, dass Sie pünktlich sind?"
+
+  - id: mpa_efz
+    level: EFZ
+    field: health
+    icon: stethoscope
+    name:
+      de: "Medizinische Praxisassistentin / Praxisassistent EFZ"
+      fr: "Assistante médicale / Assistant médical CFC"
+      it: "Assistente di studio medico AFC"
+      en: "Medical Practice Assistant (EFZ)"
+    competencies: [discretion, organisation, empathy, precision, communication, stress resistance]
+    company:
+      name: "Gruppenpraxis Sarine"
+      town: "Fribourg"
+      facts:
+        - "Bilingual (French/German) group practice with 5 doctors and 9 assistants."
+        - "Apprentices learn reception, blood tests in the lab, X-ray and administration."
+        - "Patient data is strictly confidential (medical secrecy)."
+        - "Vocational school in Fribourg, bilingual classes possible."
+    questions:
+      - id: mpa_secret
+        phase: situational
+        difficulty: 3
+        targets: [relevance, self_awareness, communication]
+        probe: "Ask why medical confidentiality is so important."
+        text:
+          de: "Eine Nachbarin fragt Sie im Dorf, warum ihr Bekannter heute in der Praxis war. Was antworten Sie?"
+          fr: "Une voisine vous demande au village pourquoi son ami était au cabinet aujourd'hui. Que répondez-vous ?"
+          it: "Una vicina le chiede in paese perché un suo conoscente oggi era in studio. Cosa risponde?"
+          en: "A neighbour asks you in the village why her acquaintance was at the practice today. What do you answer?"
+          gsw: "E Nachberin fragt Sie im Dorf, wieso ihre Bekannt hüt i de Praxis gsi isch. Was antworted Sie?"
+      - id: mpa_multitask
+        phase: situational
+        difficulty: 2
+        targets: [examples, self_awareness]
+        probe: "Ask how they set priorities."
+        text:
+          de: "Das Telefon klingelt, ein Patient wartet am Empfang und der Arzt braucht Sie im Labor. Was tun Sie zuerst?"
+          fr: "Le téléphone sonne, un patient attend à la réception et le médecin a besoin de vous au labo. Que faites-vous en premier ?"
+          it: "Il telefono squilla, un paziente aspetta alla reception e il medico ha bisogno di lei in laboratorio. Cosa fa per prima cosa?"
+          en: "The phone rings, a patient waits at reception and the doctor needs you in the lab. What do you do first?"
+          gsw: "S'Telefon lüütet, en Patient wartet am Empfang und de Arzt bruucht Sie im Labor. Was mached Sie zersch?"
+
+  - id: automech_efz
+    level: EFZ
+    field: technology
+    icon: car
+    name:
+      de: "Automobil-Mechatronikerin / Automobil-Mechatroniker EFZ"
+      fr: "Mécatronicienne / Mécatronicien d'automobiles CFC"
+      it: "Meccatronica / Meccatronico d'automobili AFC"
+      en: "Automotive Mechatronics Technician (EFZ)"
+    competencies: [technical understanding, diagnostics, carefulness, customer contact, electronics, teamwork]
+    company:
+      name: "Garage du Léman SA"
+      town: "Lausanne"
+      facts:
+        - "Multi-brand garage with 30 employees, specialised in hybrid and electric cars."
+        - "Apprentices learn diagnostics, electronics and high-voltage safety for e-cars."
+        - "Apprentices have their own workbench and toolbox from day one."
+        - "Interentreprise courses (ÜK) at the AGVS training centre."
+    questions:
+      - id: auto_ev
+        phase: motivation
+        difficulty: 2
+        targets: [motivation, relevance]
+        probe: "Ask what they know about how electric cars differ from petrol cars."
+        text:
+          de: "Autos werden immer elektrischer. Was reizt Sie an diesem Wandel?"
+          fr: "Les voitures sont de plus en plus électriques. Qu'est-ce qui vous attire dans ce changement ?"
+          it: "Le auto diventano sempre più elettriche. Cosa la affascina di questo cambiamento?"
+          en: "Cars are becoming more and more electric. What excites you about this change?"
+          gsw: "Autos wärded immer elektrischer. Was reizt Sie a däm Wandel?"
+      - id: auto_customer
+        phase: situational
+        difficulty: 3
+        targets: [communication, clarity]
+        probe: "Ask how they explain a technical problem in simple words."
+        text:
+          de: "Eine Kundin versteht nicht, warum die Reparatur so teuer ist. Wie erklären Sie es ihr?"
+          fr: "Une cliente ne comprend pas pourquoi la réparation coûte si cher. Comment le lui expliquez-vous ?"
+          it: "Una cliente non capisce perché la riparazione costa così tanto. Come glielo spiega?"
+          en: "A customer doesn't understand why the repair is so expensive. How do you explain it?"
+          gsw: "E Chundin verstaht nöd, wieso d'Reparatur so tüür isch. Wie erkläred Sie ihre das?"
+
+  - id: hauswirtschaft_eba
+    level: EBA
+    field: hospitality
+    icon: sparkles
+    name:
+      de: "Hauswirtschaftspraktikerin / Hauswirtschaftspraktiker EBA"
+      fr: "Employée / Employé en intendance AFP"
+      it: "Addetta / Addetto d'economia domestica CFP"
+      en: "Household Services Assistant (EBA)"
+    competencies: [carefulness, reliability, friendliness, hygiene, teamwork, independence]
+    company:
+      name: "Alterszentrum Rosengarten"
+      town: "Genève"
+      facts:
+        - "Care home with 80 residents and 110 employees."
+        - "Apprentices work in laundry, cleaning, kitchen support and the cafeteria."
+        - "Respectful contact with elderly residents is a big part of the job."
+        - "Possible to continue with the 3-year Fachfrau Hauswirtschaft EFZ."
+    questions:
+      - id: hw_resident
+        phase: situational
+        difficulty: 2
+        targets: [communication, self_awareness]
+        probe: "Ask how they would show respect while still doing their work."
+        text:
+          de: "Eine Bewohnerin möchte mit Ihnen plaudern, aber Sie haben noch viel Arbeit. Wie reagieren Sie?"
+          fr: "Une résidente aimerait discuter avec vous, mais vous avez encore beaucoup de travail. Comment réagissez-vous ?"
+          it: "Una residente vorrebbe chiacchierare con lei, ma lei ha ancora molto lavoro. Come reagisce?"
+          en: "A resident would like to chat with you, but you still have a lot of work. How do you react?"
+          gsw: "E Bewohnerin möcht mit Ihne plaudere, aber Sie händ no vill Arbet. Wie reagiered Sie?"
+      - id: hw_order
+        phase: motivation
+        difficulty: 1
+        targets: [motivation, examples]
+        probe: "Ask what they already help with at home."
+        text:
+          de: "Was gefällt Ihnen an Arbeiten wie Kochen, Waschen oder Ordnung machen?"
+          fr: "Qu'est-ce qui vous plaît dans des tâches comme cuisiner, laver ou ranger ?"
+          it: "Cosa le piace di lavori come cucinare, lavare o mettere in ordine?"
+          en: "What do you like about tasks like cooking, washing or tidying up?"
+          gsw: "Was gfallt Ihne a Arbete wie Choche, Wäsche oder Ornig mache?"

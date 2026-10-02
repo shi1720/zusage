@@ -1,0 +1,50 @@
+# Zusage
+
+**Your next chapter starts here.** An Apertus 1.5 8B interview coach for Swiss apprenticeships, built by Shivam Gupta for Hack Apertus 2026, Track 2A / FHGR.
+
+**[Try Zusage](https://zusage.web.app)** - choose a private student or teacher demo, with no registration or API key required.
+
+Zusage helps young people practise realistic interviews, reflect on their own answers, retry with better examples and turn feedback into spaced practice. German, French and Italian meet the challenge requirements. English is the default interface; Swiss German interview practice is also available.
+
+## What you can do
+
+- Practise 12 apprenticeships with three interviewer styles, in training or dress rehearsal mode.
+- Get six-criterion feedback with verified quotes, self-assessment, retry comparisons and a final report.
+- Build a real story bank, practise due drills and track confidence and progress.
+- Track applications, interview dates, company-specific rehearsals and stage history.
+- Use Apertus for cover letters, follow-ups, referral requests, LinkedIn messages, thank-you notes and interview prep packs. Review and edit before opening Gmail.
+- Capture pasted job adverts or supported public HTTPS posting links, then confirm extracted details.
+- Import applications and drafts from CSV, including common Teal/Huntr columns. Repeat imports update existing records and preserve unlinked drafts for later adoption.
+- View follow-up reminders, application funnel statistics, weekly goals, momentum and a replayable guided tour.
+- Create student or teacher accounts, change your password, save a single-use recovery code, export data and delete your account.
+- Use the configured Apertus key immediately, or save an optional personal Apertus key encrypted on the server. There is no model or provider selector.
+- Teachers see class progress. Student answer text requires explicit, revocable consent.
+
+## Run and test
+
+```bash
+cp .env.example .env
+# Set the Apertus endpoint/key in the ignored .env file.
+make run
+make test
+make lint
+```
+
+The container serves the app at `http://localhost:8080`. `make run-local` from `track_2a` starts a local quantized Apertus 8B server. Fonts are bundled. A local GPU run still needs to be verified on actual consumer hardware; memory estimates are not benchmark measurements.
+
+```bash
+uv run --project src/backend python scripts/e2e.py --url https://zusage.web.app
+./scripts/deploy.sh
+```
+
+The deployment script validates the source, builds the container, deploys only the dedicated Zusage Cloud Run service and Firebase site, waits for routing and runs a live interview selfcheck. It expects the dedicated database, runtime service account and secrets to be provisioned first.
+
+## Deployment and verification
+
+Firebase Hosting serves the frontend at **https://zusage.web.app**. Cloud Run in `europe-west1` serves the API; Cloud SQL PostgreSQL persists data. Secret Manager holds server credentials. An authenticated hourly Cloud Scheduler job prepares follow-ups for registered accounts and sends optional Web Push notifications. Demo visitors are excluded from background scans.
+
+Current automated validation: 77 backend tests and 9 frontend tests, plus live HTTP interviews across German, French, Italian, English and Swiss German. The five-language run completed 38 candidate answers with 43 model calls, averaging 1.13 calls per answer, with no offline fallback in that run. This verifies functionality, not an official judge benchmark or a guarantee of future model availability.
+
+See [deployment](docs/DEPLOYMENT.md), [testing instructions](docs/TESTING.md), [privacy](docs/PRIVACY.md), [feature comparison](docs/OFFERLOOP_PARITY.md) and [technical report](technical_report.md).
+
+Apache-2.0. Offerloop-inspired workflow design is adapted for apprenticeship learners. The application coach remains Apertus 1.5 8B.

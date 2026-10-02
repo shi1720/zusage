@@ -1,0 +1,40 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 300' font-family='Atkinson Hyperlegible, Helvetica, Arial, sans-serif'>
+<rect width='640' height='300' fill='#fff'/>
+<text x='46' y='22' font-size='14' font-weight='700' fill='#16232e'>Calibration ρ per interview language</text>
+<line x1='46' x2='624' y1='248.0' y2='248.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='252.0' font-size='10' text-anchor='end' fill='#7d8f9c'>0.00</text>
+<line x1='46' x2='624' y1='196.0' y2='196.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='200.0' font-size='10' text-anchor='end' fill='#7d8f9c'>0.25</text>
+<line x1='46' x2='624' y1='144.0' y2='144.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='148.0' font-size='10' text-anchor='end' fill='#7d8f9c'>0.50</text>
+<line x1='46' x2='624' y1='92.0' y2='92.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='96.0' font-size='10' text-anchor='end' fill='#7d8f9c'>0.75</text>
+<line x1='46' x2='624' y1='40.0' y2='40.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='44.0' font-size='10' text-anchor='end' fill='#7d8f9c'>1.00</text>
+<path d='M62.8,248 V78.4 Q62.8,75.4 65.8,75.4 H85.8 Q88.8,75.4 88.8,78.4 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · de: 0.83</title></path>
+<path d='M90.8,248 V76.5 Q90.8,73.5 93.8,73.5 H113.8 Q116.8,73.5 116.8,76.5 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · de: 0.84</title></path>
+<path d='M118.8,248 V96.5 Q118.8,93.5 121.8,93.5 H141.8 Q144.8,93.5 144.8,96.5 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · de: 0.74</title></path>
+<text x='103.8' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>de</text>
+<path d='M178.4,248 V100.0 Q178.4,97.0 181.4,97.0 H201.4 Q204.4,97.0 204.4,100.0 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · en: 0.73</title></path>
+<path d='M206.4,248 V55.3 Q206.4,52.3 209.4,52.3 H229.4 Q232.4,52.3 232.4,55.3 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · en: 0.94</title></path>
+<path d='M234.4,248 V77.3 Q234.4,74.3 237.4,74.3 H257.4 Q260.4,74.3 260.4,77.3 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · en: 0.83</title></path>
+<text x='219.4' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>en</text>
+<path d='M294.0,248 V78.4 Q294.0,75.4 297.0,75.4 H317.0 Q320.0,75.4 320.0,78.4 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · fr: 0.83</title></path>
+<path d='M322.0,248 V72.7 Q322.0,69.7 325.0,69.7 H345.0 Q348.0,69.7 348.0,72.7 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · fr: 0.86</title></path>
+<path d='M350.0,248 V90.4 Q350.0,87.4 353.0,87.4 H373.0 Q376.0,87.4 376.0,90.4 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · fr: 0.77</title></path>
+<text x='335.0' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>fr</text>
+<path d='M409.6,248 V124.7 Q409.6,121.7 412.6,121.7 H432.6 Q435.6,121.7 435.6,124.7 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · gsw: 0.61</title></path>
+<path d='M437.6,248 V112.7 Q437.6,109.7 440.6,109.7 H460.6 Q463.6,109.7 463.6,112.7 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · gsw: 0.67</title></path>
+<path d='M465.6,248 V112.7 Q465.6,109.7 468.6,109.7 H488.6 Q491.6,109.7 491.6,112.7 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · gsw: 0.67</title></path>
+<text x='450.6' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>gsw</text>
+<path d='M525.2,248 V70.0 Q525.2,67.0 528.2,67.0 H548.2 Q551.2,67.0 551.2,70.0 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · it: 0.87</title></path>
+<path d='M553.2,248 V70.7 Q553.2,67.7 556.2,67.7 H576.2 Q579.2,67.7 579.2,70.7 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · it: 0.87</title></path>
+<path d='M581.2,248 V82.1 Q581.2,79.1 584.2,79.1 H604.2 Q607.2,79.1 607.2,82.1 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · it: 0.81</title></path>
+<text x='566.2' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>it</text>
+<rect x='46' y='284' width='10' height='10' rx='2' fill='#1f6fd1'/>
+<text x='60' y='293' font-size='11' fill='#4b5d6b'>Zusage (Apertus 8B)</text>
+<rect x='211' y='284' width='10' height='10' rx='2' fill='#c8642a'/>
+<text x='225' y='293' font-size='11' fill='#4b5d6b'>Naive Apertus prompt</text>
+<rect x='383' y='284' width='10' height='10' rx='2' fill='#8a9aa6'/>
+<text x='397' y='293' font-size='11' fill='#4b5d6b'>Rule-based baseline</text>
+</svg>

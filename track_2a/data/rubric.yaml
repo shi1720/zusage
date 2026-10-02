@@ -1,0 +1,87 @@
+# Probelauf assessment rubric
+# ---------------------------------------------------------------------------
+# Six criteria taken 1:1 from the FHGR challenge brief (clarity, relevance,
+# motivation, self-awareness, communication, concrete examples). Each criterion
+# is scored on a 4-level, development-oriented scale (no "fail" level - a
+# youth-appropriate choice: level 1 means "not yet", not "bad").
+#
+# The anchors below are injected verbatim into the scoring prompt, so the model
+# scores against explicit, observable behaviour instead of a vague impression.
+# Editable by teachers / FHGR didactics experts without touching code.
+version: "1.2"
+scale:
+  min: 1
+  max: 4
+  levels:
+    1: {de: "Noch nicht", fr: "Pas encore", it: "Non ancora", en: "Not yet"}
+    2: {de: "Auf dem Weg", fr: "En progrès", it: "In crescita", en: "Getting there"}
+    3: {de: "Gut", fr: "Bien", it: "Bene", en: "Good"}
+    4: {de: "Stark", fr: "Excellent", it: "Ottimo", en: "Strong"}
+
+criteria:
+  clarity:
+    name: {de: "Klarheit", fr: "Clarté", it: "Chiarezza", en: "Clarity"}
+    question: "Is the answer easy to follow, with a clear main point?"
+    anchors:
+      1: "No recognisable main point; fragments or one-word answer."
+      2: "Main point present but buried; jumps between ideas."
+      3: "Clear main point with some structure."
+      4: "Clear main point first, then reasons/example in a logical order."
+  relevance:
+    name: {de: "Relevanz", fr: "Pertinence", it: "Pertinenza", en: "Relevance"}
+    question: "Does the answer address the actual question and the job?"
+    anchors:
+      1: "Does not answer the question asked."
+      2: "Partly answers the question; drifts off-topic."
+      3: "Answers the question."
+      4: "Answers the question and links it to the apprenticeship/company."
+  motivation:
+    name: {de: "Motivation", fr: "Motivation", it: "Motivazione", en: "Motivation"}
+    question: "Does the candidate show genuine, specific interest in the job?"
+    anchors:
+      1: "No interest visible, or only external reasons (parents, money, 'nothing else')."
+      2: "Generic interest ('I like it') without reasons."
+      3: "Specific reasons for this occupation."
+      4: "Specific, personal reasons backed by experience (e.g. Schnupperlehre, hobby, project)."
+  self_awareness:
+    name: {de: "Selbstreflexion", fr: "Connaissance de soi", it: "Consapevolezza di sé", en: "Self-awareness"}
+    question: "Does the candidate know their strengths and areas to grow, honestly?"
+    anchors:
+      1: "Cannot name strengths/weaknesses, or only clichés ('I am a perfectionist')."
+      2: "Names a strength or weakness without explanation."
+      3: "Names strengths/weaknesses with a short reason."
+      4: "Honest reflection incl. what they do to improve a weakness."
+  communication:
+    name: {de: "Kommunikation", fr: "Communication", it: "Comunicazione", en: "Communication"}
+    question: "Is the tone polite, appropriate and confident for an interview?"
+    anchors:
+      1: "Inappropriate tone, rude, or unusable answer."
+      2: "Very informal or very hesitant; hard to read as interview answer."
+      3: "Polite and appropriate."
+      4: "Polite, confident and engaging; complete sentences."
+  examples:
+    name: {de: "Konkrete Beispiele", fr: "Exemples concrets", it: "Esempi concreti", en: "Concrete examples"}
+    question: "Does the candidate back claims with a concrete, real situation?"
+    anchors:
+      1: "No example."
+      2: "Vague example ('at school sometimes')."
+      3: "Concrete situation (when/where/what)."
+      4: "Concrete situation incl. own action and result (STAR-like)."
+
+# How the overall score of a session is computed (deterministic, in code):
+# mean of all criterion scores across scored turns, weighted equally, mapped to 0–100.
+
+# Phase-specific anchors. In the "candidate questions" phase, ASKING good
+# questions is the answer: recruiters read it as interest in the company.
+phase_anchors:
+  candidate_questions:
+    motivation:
+      1: "No question at all, or 'no, everything is clear'."
+      2: "Only questions about money, holidays or leaving early."
+      3: "One relevant question about the training, tasks or the company."
+      4: "Two or more thoughtful questions (e.g. a typical first-year day, vocational baccalaureate (BM), how apprentices are supported)."
+    communication:
+      1: "Rude or unusable."
+      2: "Very short or informal."
+      3: "Polite, complete question."
+      4: "Polite, clear and engaged (e.g. thanks, links the question to what they heard)."

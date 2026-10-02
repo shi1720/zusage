@@ -1,0 +1,193 @@
+# Probelauf question bank - generic questions per interview phase
+# ---------------------------------------------------------------------------
+# Interview flow follows the FHGR-suggested structure:
+#   intro -> motivation -> strengths -> situational -> candidate_questions -> closing
+# Occupation-specific questions live in occupations.yaml and are merged in by
+# the deterministic planner (src/probelauf/engine/planner.py).
+#
+# Register: the INTERVIEWER uses the formal register (Sie / vous / Lei), which
+# is what most Swiss training companies use with apprenticeship applicants.
+# The COACH (feedback) uses the informal register (du / tu / tu).
+#
+# `gsw` = Swiss German (Zurich-leaning Mundart, glottocode zuri1239). Planned
+# questions are pre-written in dialect so dialect mode never depends on the
+# model *inventing* dialect for the core questions.
+#
+# `targets` = rubric criteria this question is designed to elicit.
+# `probe`   = guidance for the model on what a good follow-up digs for.
+version: "1.3"
+
+questions:
+  # ------------------------------------------------------------------ intro
+  - id: intro_about_you
+    phase: intro
+    difficulty: 1
+    targets: [clarity, communication, self_awareness]
+    probe: "If very short, ask about hobbies, school or something they are proud of."
+    text:
+      de: "Erzählen Sie mir doch zuerst ein bisschen über sich: Wer sind Sie und was machen Sie gerne in Ihrer Freizeit?"
+      fr: "Pour commencer, parlez-moi un peu de vous : qui êtes-vous et qu'aimez-vous faire pendant votre temps libre ?"
+      it: "Per iniziare, mi racconti un po' di sé: chi è e cosa le piace fare nel tempo libero?"
+      en: "To start, tell me a little about yourself: who are you and what do you like doing in your free time?"
+      gsw: "Verzelled Sie mir doch zersch es bitzeli öppis über sich: Wer sind Sie und was mached Sie gern i de Freiziit?"
+
+  - id: intro_school
+    phase: intro
+    difficulty: 1
+    targets: [clarity, self_awareness]
+    probe: "Ask which subject they like most and why."
+    text:
+      de: "Wie läuft es momentan in der Schule? Welches Fach haben Sie am liebsten?"
+      fr: "Comment ça se passe à l'école en ce moment ? Quelle est votre matière préférée ?"
+      it: "Come va a scuola in questo periodo? Qual è la sua materia preferita?"
+      en: "How is school going at the moment? Which subject do you like most?"
+      gsw: "Wie lauft's grad i de Schuel? Welles Fach händ Sie am liebschte?"
+
+  # ------------------------------------------------------------- motivation
+  - id: mot_why_occupation
+    phase: motivation
+    difficulty: 1
+    targets: [motivation, relevance, examples]
+    probe: "Probe for the moment they discovered the occupation (Schnupperlehre, family, hobby)."
+    text:
+      de: "Warum möchten Sie gerade diese Lehre machen?"
+      fr: "Pourquoi souhaitez-vous faire précisément cet apprentissage ?"
+      it: "Perché desidera fare proprio questo apprendistato?"
+      en: "Why do you want to do this particular apprenticeship?"
+      gsw: "Wieso wänd Sie grad die Lehr mache?"
+
+  - id: mot_schnupper
+    phase: motivation
+    difficulty: 2
+    targets: [motivation, examples, self_awareness]
+    probe: "Ask what exactly they did and what surprised them."
+    text:
+      de: "Haben Sie schon eine Schnupperlehre gemacht? Was haben Sie dort erlebt und gelernt?"
+      fr: "Avez-vous déjà fait un stage d'observation ? Qu'avez-vous vécu et appris ?"
+      it: "Ha già fatto uno stage di orientamento? Che cosa ha vissuto e imparato?"
+      en: "Have you already done a trial apprenticeship (Schnupperlehre)? What did you experience and learn there?"
+      gsw: "Händ Sie scho e Schnupperlehr gmacht? Was händ Sie det erläbt und glernt?"
+
+  - id: mot_why_company
+    phase: motivation
+    difficulty: 2
+    targets: [motivation, relevance]
+    probe: "Ask what they know about the company or why this company and not another one."
+    text:
+      de: "Warum haben Sie sich gerade bei uns beworben?"
+      fr: "Pourquoi avez-vous postulé précisément chez nous ?"
+      it: "Perché si è candidato/a proprio da noi?"
+      en: "Why did you apply to our company in particular?"
+      gsw: "Wieso händ Sie sich grad bi üs beworbe?"
+
+  - id: mot_future
+    phase: motivation
+    difficulty: 3
+    targets: [motivation, self_awareness]
+    probe: "Ask whether Berufsmaturität (BM) or further training is an option for them."
+    text:
+      de: "Wo sehen Sie sich nach der Lehre? Haben Sie schon Pläne, zum Beispiel eine Berufsmaturität?"
+      fr: "Où vous voyez-vous après l'apprentissage ? Avez-vous déjà des projets, par exemple une maturité professionnelle ?"
+      it: "Dove si vede dopo l'apprendistato? Ha già dei progetti, per esempio una maturità professionale?"
+      en: "Where do you see yourself after the apprenticeship? Any plans yet, for example the vocational baccalaureate (BM)?"
+      gsw: "Wo gsehnd Sie sich nach de Lehr? Händ Sie scho Plän, zum Bispiel e Berufsmatur?"
+
+  # -------------------------------------------------------------- strengths
+  - id: str_strengths
+    phase: strengths
+    difficulty: 1
+    targets: [self_awareness, examples]
+    probe: "Ask for a concrete situation where this strength helped them."
+    text:
+      de: "Was sind Ihre Stärken? Können Sie mir ein Beispiel geben?"
+      fr: "Quels sont vos points forts ? Pouvez-vous me donner un exemple ?"
+      it: "Quali sono i suoi punti di forza? Può farmi un esempio?"
+      en: "What are your strengths? Can you give me an example?"
+      gsw: "Was sind Ihri Stärche? Chönd Sie mir es Bispiel gäh?"
+
+  - id: str_weakness
+    phase: strengths
+    difficulty: 2
+    targets: [self_awareness, communication]
+    probe: "Ask what they are doing to improve on it."
+    text:
+      de: "Und wo sehen Sie noch Verbesserungspotenzial bei sich?"
+      fr: "Et dans quels domaines pensez-vous encore pouvoir vous améliorer ?"
+      it: "E in quali aspetti pensa di poter ancora migliorare?"
+      en: "And where do you see room for improvement in yourself?"
+      gsw: "Und wo gsehnd Sie bi sich no Verbesserigspotenzial?"
+
+  - id: str_friends
+    phase: strengths
+    difficulty: 2
+    targets: [self_awareness, communication]
+    probe: "Ask whether they agree with how friends see them."
+    text:
+      de: "Wie würden Ihre Kolleginnen und Kollegen Sie mit drei Worten beschreiben?"
+      fr: "Comment vos amis vous décriraient-ils en trois mots ?"
+      it: "Come la descriverebbero i suoi amici con tre parole?"
+      en: "How would your friends describe you in three words?"
+      gsw: "Wie würded Ihri KollegInne Sie mit drü Wörter beschriibe?"
+
+  # ------------------------------------------------------------ situational
+  - id: sit_team_conflict
+    phase: situational
+    difficulty: 2
+    targets: [examples, communication, self_awareness]
+    probe: "Ask what they personally did and what the result was (STAR)."
+    text:
+      de: "Erzählen Sie mir von einer Situation, in der es in einer Gruppe Streit oder Probleme gab. Wie haben Sie reagiert?"
+      fr: "Racontez-moi une situation où il y a eu un conflit ou un problème dans un groupe. Comment avez-vous réagi ?"
+      it: "Mi racconti una situazione in cui in un gruppo c'era un conflitto o un problema. Come ha reagito?"
+      en: "Tell me about a situation where there was conflict or a problem in a group. How did you react?"
+      gsw: "Verzelled Sie mir vo nere Situation, wo's i nere Gruppe Striit oder Problem gäh hät. Wie händ Sie reagiert?"
+
+  - id: sit_mistake
+    phase: situational
+    difficulty: 2
+    targets: [self_awareness, examples]
+    probe: "Ask what they learned and would do differently next time."
+    text:
+      de: "Stellen Sie sich vor, Sie machen in der ersten Lehrwoche einen Fehler. Was tun Sie?"
+      fr: "Imaginez que vous faites une erreur pendant votre première semaine d'apprentissage. Que faites-vous ?"
+      it: "Immagini di commettere un errore durante la prima settimana di apprendistato. Cosa fa?"
+      en: "Imagine you make a mistake in your first week of the apprenticeship. What do you do?"
+      gsw: "Stelled Sie sich vor, Sie mached i de erschte Lehrwuche en Fehler. Was mached Sie?"
+
+  - id: sit_stress
+    phase: situational
+    difficulty: 3
+    targets: [self_awareness, examples]
+    probe: "Ask for a concrete moment (exam week, sports competition) and what helped."
+    text:
+      de: "Berufsschule, Arbeit, vielleicht noch Hobbys: Wie gehen Sie mit Stress um?"
+      fr: "École professionnelle, travail, peut-être des loisirs : comment gérez-vous le stress ?"
+      it: "Scuola professionale, lavoro, magari anche hobby: come gestisce lo stress?"
+      en: "Vocational school, work, maybe hobbies too: how do you deal with stress?"
+      gsw: "Berufsschuel, Arbet, vilicht no Hobbys: Wie gönd Sie mit Stress um?"
+
+  # ---------------------------------------------------- candidate questions
+  - id: cand_questions
+    phase: candidate_questions
+    difficulty: 1
+    targets: [motivation, communication]
+    probe: "If the candidate asks a question, answer it briefly using ONLY the company facts; otherwise suggest that asking questions shows interest."
+    text:
+      de: "Haben Sie noch Fragen an uns?"
+      fr: "Avez-vous des questions à nous poser ?"
+      it: "Ha qualche domanda da farci?"
+      en: "Do you have any questions for us?"
+      gsw: "Händ Sie no Frage a üs?"
+
+  # ---------------------------------------------------------------- closing
+  - id: closing
+    phase: closing
+    difficulty: 1
+    targets: []
+    probe: ""
+    text:
+      de: "Vielen Dank für das Gespräch! Sie hören bis Ende nächster Woche von uns."
+      fr: "Merci beaucoup pour cet entretien ! Vous aurez de nos nouvelles d'ici la fin de la semaine prochaine."
+      it: "Grazie mille per il colloquio! Avrà nostre notizie entro la fine della prossima settimana."
+      en: "Thank you very much for the conversation! You will hear from us by the end of next week."
+      gsw: "Merci vilmal für das Gspräch! Sie ghöred bis Änd nächscht Wuche vo üs."

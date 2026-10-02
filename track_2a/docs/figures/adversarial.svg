@@ -1,0 +1,52 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 300' font-family='Atkinson Hyperlegible, Helvetica, Arial, sans-serif'>
+<rect width='700' height='300' fill='#fff'/>
+<text x='46' y='22' font-size='14' font-weight='700' fill='#16232e'>Adversarial set: share judged correctly, by trap type</text>
+<line x1='46' x2='684' y1='248.0' y2='248.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='252.0' font-size='10' text-anchor='end' fill='#7d8f9c'>0%</text>
+<line x1='46' x2='684' y1='196.0' y2='196.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='200.0' font-size='10' text-anchor='end' fill='#7d8f9c'>25%</text>
+<line x1='46' x2='684' y1='144.0' y2='144.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='148.0' font-size='10' text-anchor='end' fill='#7d8f9c'>50%</text>
+<line x1='46' x2='684' y1='92.0' y2='92.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='96.0' font-size='10' text-anchor='end' fill='#7d8f9c'>75%</text>
+<line x1='46' x2='684' y1='40.0' y2='40.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='44.0' font-size='10' text-anchor='end' fill='#7d8f9c'>100%</text>
+<path d='M53.0,248 V43.0 Q53.0,40.0 56.0,40.0 H70.6 Q73.6,40.0 73.6,43.0 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · attitude: 100%</title></path>
+<path d='M75.6,248 V43.0 Q75.6,40.0 78.6,40.0 H93.2 Q96.2,40.0 96.2,43.0 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · attitude: 100%</title></path>
+<path d='M98.2,248 V84.6 Q98.2,81.6 101.2,81.6 H115.7 Q118.7,81.6 118.7,84.6 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · attitude: 80%</title></path>
+<text x='85.9' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>attitude</text>
+<path d='M132.8,248 V147.0 Q132.8,144.0 135.8,144.0 H150.3 Q153.3,144.0 153.3,147.0 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · cliche: 50%</title></path>
+<path d='M155.3,248 V251.0 Q155.3,248.0 158.3,248.0 H172.9 Q175.9,248.0 175.9,251.0 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · cliche: 0%</title></path>
+<path d='M177.9,248 V251.0 Q177.9,248.0 180.9,248.0 H195.5 Q198.5,248.0 198.5,251.0 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · cliche: 0%</title></path>
+<text x='165.6' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>cliche</text>
+<path d='M212.5,248 V68.0 Q212.5,65.0 215.5,65.0 H230.1 Q233.1,65.0 233.1,68.0 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · concise: 88%</title></path>
+<path d='M235.1,248 V68.0 Q235.1,65.0 238.1,65.0 H252.7 Q255.7,65.0 255.7,68.0 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · concise: 88%</title></path>
+<path d='M257.7,248 V147.0 Q257.7,144.0 260.7,144.0 H275.2 Q278.2,144.0 278.2,147.0 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · concise: 50%</title></path>
+<text x='245.4' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>concise</text>
+<path d='M292.2,248 V43.0 Q292.2,40.0 295.2,40.0 H309.8 Q312.8,40.0 312.8,43.0 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · dialect: 100%</title></path>
+<path d='M314.8,248 V147.0 Q314.8,144.0 317.8,144.0 H332.4 Q335.4,144.0 335.4,147.0 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · dialect: 50%</title></path>
+<path d='M337.4,248 V43.0 Q337.4,40.0 340.4,40.0 H355.0 Q358.0,40.0 358.0,43.0 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · dialect: 100%</title></path>
+<text x='325.1' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>dialect</text>
+<path d='M372.0,248 V43.0 Q372.0,40.0 375.0,40.0 H389.6 Q392.6,40.0 392.6,43.0 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · keywords: 100%</title></path>
+<path d='M394.6,248 V43.0 Q394.6,40.0 397.6,40.0 H412.2 Q415.2,40.0 415.2,43.0 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · keywords: 100%</title></path>
+<path d='M417.2,248 V199.0 Q417.2,196.0 420.2,196.0 H434.8 Q437.8,196.0 437.8,199.0 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · keywords: 25%</title></path>
+<text x='404.9' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>keywords</text>
+<path d='M451.8,248 V43.0 Q451.8,40.0 454.8,40.0 H469.3 Q472.3,40.0 472.3,43.0 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · l2: 100%</title></path>
+<path d='M474.3,248 V147.0 Q474.3,144.0 477.3,144.0 H491.9 Q494.9,144.0 494.9,147.0 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · l2: 50%</title></path>
+<path d='M496.9,248 V43.0 Q496.9,40.0 499.9,40.0 H514.5 Q517.5,40.0 517.5,43.0 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · l2: 100%</title></path>
+<text x='484.6' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>l2</text>
+<path d='M531.5,248 V43.0 Q531.5,40.0 534.5,40.0 H549.1 Q552.1,40.0 552.1,43.0 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · off_topic: 100%</title></path>
+<path d='M554.1,248 V43.0 Q554.1,40.0 557.1,40.0 H571.7 Q574.7,40.0 574.7,43.0 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · off_topic: 100%</title></path>
+<path d='M576.7,248 V182.4 Q576.7,179.4 579.7,179.4 H594.2 Q597.2,179.4 597.2,182.4 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · off_topic: 33%</title></path>
+<text x='564.4' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>off_topic</text>
+<path d='M611.2,248 V43.0 Q611.2,40.0 614.2,40.0 H628.8 Q631.8,40.0 631.8,43.0 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · rambling: 100%</title></path>
+<path d='M633.8,248 V199.0 Q633.8,196.0 636.8,196.0 H651.4 Q654.4,196.0 654.4,199.0 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · rambling: 25%</title></path>
+<path d='M656.4,248 V251.0 Q656.4,248.0 659.4,248.0 H674.0 Q677.0,248.0 677.0,251.0 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · rambling: 0%</title></path>
+<text x='644.1' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>rambling</text>
+<rect x='46' y='284' width='10' height='10' rx='2' fill='#1f6fd1'/>
+<text x='60' y='293' font-size='11' fill='#4b5d6b'>Zusage (Apertus 8B)</text>
+<rect x='211' y='284' width='10' height='10' rx='2' fill='#c8642a'/>
+<text x='225' y='293' font-size='11' fill='#4b5d6b'>Naive Apertus prompt</text>
+<rect x='383' y='284' width='10' height='10' rx='2' fill='#8a9aa6'/>
+<text x='397' y='293' font-size='11' fill='#4b5d6b'>Rule-based baseline</text>
+</svg>

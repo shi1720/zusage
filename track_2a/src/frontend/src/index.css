@@ -1,0 +1,183 @@
+@import "tailwindcss";
+@import "@fontsource-variable/archivo/wdth.css";
+@import "@fontsource/atkinson-hyperlegible/latin-400.css";
+@import "@fontsource/atkinson-hyperlegible/latin-700.css";
+@import "@fontsource/ibm-plex-mono/latin-400.css";
+@import "@fontsource/ibm-plex-mono/latin-500.css";
+
+/* ---------------------------------------------------------------------------
+   Zusage design tokens - "Wanderweg"
+   Swiss hiking-trail vernacular: signpost yellow for direction & progress,
+   red-white-red trail blazes for milestones, glacier white ground, slate ink.
+   Fonts are self-hosted (fontsource) so the app works fully air-gapped.
+--------------------------------------------------------------------------- */
+
+@theme {
+  --font-sans: "Archivo Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Archivo Variable", "Archivo", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Surfaces */
+  --color-page: #f7f8fc; /* glacier */
+  --color-panel: #ffffff;
+  --color-card: #ffffff;
+  --color-raised: #eef0f8;
+  --color-line: #d9ddec;
+  --color-line-soft: #eaecf4;
+
+  /* Ink */
+  --color-ink: #17213c; /* slate night */
+  --color-ink-2: #525d77;
+  --color-ink-3: #626d85;
+
+  /* Signal colours */
+  --color-sign: #e9e8ff; /* Wanderweg signpost yellow */
+  --color-sign-deep: #6654e8;
+  --color-sign-ink: #17213c;
+  --color-blaze: #d52b1e; /* red-white-red trail marker */
+  --color-fir: #16816b; /* strong / success */
+  --color-lake: #5643d6; /* links, interactive accents */
+  --color-dusk: #7055d8; /* coach voice */
+
+  /* Score scale (1-4): a single-hue sequential "growth" ramp - pale = not yet
+     grown, deep = strong. Ordinal, lightness-monotone, always shown with the
+     number, so it never relies on colour alone (and never shames in red). */
+  --color-score-1: #c3e0d8;
+  --color-score-2: #86bfae;
+  --color-score-3: #3f8f78;
+  --color-score-4: #17594a;
+
+  /* Comparison series (validated: CVD ΔE 25, contrast >= 3:1) */
+  --color-series-now: #1f6fd1;
+  --color-series-before: #c8642a;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-sign) 55%, transparent);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-sign);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 100;
+  letter-spacing: -0.015em;
+}
+
+/* Condensed signage cut of Archivo - used ONLY for signpost labels */
+.font-sign {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 100;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Wide display cut for the big hero headline */
+.font-hero {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 100;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.ring-card {
+  box-shadow:
+    0 0 0 1px var(--color-line-soft),
+    0 10px 28px -18px rgb(22 35 46 / 0.35);
+}
+
+/* Soft, restrained accents across the entire product. */
+.signpost { background: var(--color-sign); color: var(--color-lake); border-radius: 999px; padding-right: 14px; }
+.blaze { background: var(--color-lake); border-radius: 999px; }
+.contours { background: radial-gradient(ellipse at 85% 10%, #ebe8ff 0, transparent 58%), radial-gradient(ellipse at 10% 90%, #e8f5f3 0, transparent 65%), var(--color-card); }
+.hero-grid { background-image: linear-gradient(#dfe3f330 1px, transparent 1px), linear-gradient(90deg, #dfe3f330 1px, transparent 1px); background-size: 44px 44px; }
+.ring-card { box-shadow: 0 0 0 1px #e8eaf3, 0 8px 32px -18px #30366028; }
+input, textarea, select { transition: border-color .2s, box-shadow .2s; }
+input:focus, textarea:focus, select:focus { border-color: var(--color-lake); box-shadow: 0 0 0 3px #6654e814; }
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-rise {
+  animation: rise 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes typing {
+  0%,
+  80%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+.typing-dot {
+  animation: typing 1.2s infinite ease-in-out;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgb(213 43 30 / 0.45);
+  }
+  100% {
+    box-shadow: 0 0 0 14px rgb(213 43 30 / 0);
+  }
+}
+.recording {
+  animation: pulse-ring 1.2s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+  }
+  main {
+    overflow: visible !important;
+  }
+}

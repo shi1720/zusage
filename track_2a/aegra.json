@@ -1,0 +1,7 @@
+{
+  "dependencies": ["./src/backend"],
+  "graphs": {
+    "zusage_interview": "./src/backend/aegra_graph.py:graph"
+  },
+  "env": ".env"
+}

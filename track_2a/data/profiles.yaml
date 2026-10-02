@@ -1,0 +1,107 @@
+# Synthetic candidate profiles (fully fictional - no real persons)
+# ---------------------------------------------------------------------------
+# Used for (a) one-click demo interviews and (b) the evaluation harness, where
+# a simulated candidate answers in-character. Profiles deliberately vary in
+# language region, school level, confidence and background, so that we can
+# measure CONSISTENCY across candidate profiles (25% of the FHGR score).
+#
+# school levels: Sek A / Sek B / Sek C (German-speaking cantons),
+# VG / VP (Vaud), "scuola media" levels (Ticino).
+version: "1.0"
+
+profiles:
+  - id: lea
+    first_name: Lea
+    age: 15
+    language: de
+    canton: GR
+    school: "Sek A, 3. Oberstufe in Chur"
+    target: fage_efz
+    hobbies: [Volleyball, babysitting her two younger cousins]
+    experience: "Schnupperlehre (3 days) at a care home in Landquart"
+    traits: "empathetic, a bit shy at first, well organised"
+    voice: "Speaks politely, sometimes too short when nervous."
+
+  - id: noah
+    first_name: Noah
+    age: 16
+    language: de
+    canton: SG
+    school: "Sek A, 3. Oberstufe in St. Gallen"
+    target: informatik_efz
+    hobbies: [gaming, built a Minecraft server for his class, unihockey]
+    experience: "Schnupperlehre at a software company (2 days)"
+    traits: "curious, logical, tends to ramble about tech details"
+    voice: "Enthusiastic, uses some English tech words."
+
+  - id: elif
+    first_name: Elif
+    age: 15
+    language: gsw
+    canton: ZH
+    school: "Sek B in Winterthur"
+    target: detailhandel_efz
+    hobbies: [TikTok fashion videos, helping in her uncle's kiosk]
+    experience: "Schnupperlehre at a sports shop"
+    traits: "outgoing, talks easily with people, struggles with written German"
+    voice: "Writes in Zurich German dialect, informal."
+
+  - id: luca
+    first_name: Luca
+    age: 15
+    language: it
+    canton: TI
+    school: "Scuola media, 4a, Bellinzona"
+    target: logistik_eba
+    hobbies: [calcio, aiuta il nonno in giardino]
+    experience: "Stage di orientamento in un magazzino (2 giorni)"
+    traits: "reliable, practical, not confident in school subjects"
+    voice: "Short answers, honest, needs encouragement."
+
+  - id: chloe
+    first_name: Chloé
+    age: 16
+    language: fr
+    canton: VD
+    school: "VG, 11e année, Lausanne"
+    target: automech_efz
+    hobbies: [karting, répare des vélos avec son père]
+    experience: "Stage d'observation dans un garage à Renens"
+    traits: "determined, technically curious, wants to prove herself in a male-dominated field"
+    voice: "Clear and direct."
+
+  - id: amar
+    first_name: Amar
+    age: 17
+    language: de
+    canton: BE
+    school: "Brückenangebot (10th school year) in Bern; arrived in Switzerland 4 years ago"
+    target: koch_efz
+    hobbies: [cooking for his family, football]
+    experience: "Schnupperlehre in a hotel kitchen"
+    traits: "hard-working, motivated, German is his second language"
+    voice: "Simple German with small grammar mistakes, very motivated."
+
+  - id: mara
+    first_name: Mara
+    age: 15
+    language: de
+    canton: LU
+    school: "Sek A, Luzern"
+    target: kaufmann_efz
+    hobbies: [Handball, Schülerrat (student council)]
+    experience: "Schnupperlehre at a bank and at a fiduciary office"
+    traits: "confident, well prepared, sometimes sounds rehearsed"
+    voice: "Polished, complete sentences."
+
+  - id: giulia
+    first_name: Giulia
+    age: 16
+    language: it
+    canton: TI
+    school: "Scuola media, 4a, Lugano"
+    target: fabe_efz
+    hobbies: [danza, fa la monitrice in una colonia estiva]
+    experience: "Stage in un asilo nido a Lugano"
+    traits: "creative, patient, loves children"
+    voice: "Warm, talkative."

@@ -1,0 +1,32 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 300' font-family='Atkinson Hyperlegible, Helvetica, Arial, sans-serif'>
+<rect width='640' height='300' fill='#fff'/>
+<text x='46' y='22' font-size='14' font-weight='700' fill='#16232e'>Mean coach score (1–4) by gold answer quality</text>
+<line x1='46' x2='624' y1='248.0' y2='248.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='252.0' font-size='10' text-anchor='end' fill='#7d8f9c'>0.0</text>
+<line x1='46' x2='624' y1='196.0' y2='196.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='200.0' font-size='10' text-anchor='end' fill='#7d8f9c'>1.0</text>
+<line x1='46' x2='624' y1='144.0' y2='144.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='148.0' font-size='10' text-anchor='end' fill='#7d8f9c'>2.0</text>
+<line x1='46' x2='624' y1='92.0' y2='92.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='96.0' font-size='10' text-anchor='end' fill='#7d8f9c'>3.0</text>
+<line x1='46' x2='624' y1='40.0' y2='40.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='44.0' font-size='10' text-anchor='end' fill='#7d8f9c'>4.0</text>
+<path d='M101.3,248 V174.0 Q101.3,171.0 104.3,171.0 H124.3 Q127.3,171.0 127.3,174.0 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · weak: 1.5</title></path>
+<path d='M129.3,248 V176.6 Q129.3,173.6 132.3,173.6 H152.3 Q155.3,173.6 155.3,176.6 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · weak: 1.4</title></path>
+<path d='M157.3,248 V188.1 Q157.3,185.1 160.3,185.1 H180.3 Q183.3,185.1 183.3,188.1 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · weak: 1.2</title></path>
+<text x='142.3' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>weak</text>
+<path d='M294.0,248 V150.1 Q294.0,147.1 297.0,147.1 H317.0 Q320.0,147.1 320.0,150.1 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · solid: 1.9</title></path>
+<path d='M322.0,248 V133.5 Q322.0,130.5 325.0,130.5 H345.0 Q348.0,130.5 348.0,133.5 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · solid: 2.3</title></path>
+<path d='M350.0,248 V155.3 Q350.0,152.3 353.0,152.3 H373.0 Q376.0,152.3 376.0,155.3 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · solid: 1.8</title></path>
+<text x='335.0' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>solid</text>
+<path d='M486.7,248 V104.9 Q486.7,101.9 489.7,101.9 H509.7 Q512.7,101.9 512.7,104.9 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · strong: 2.8</title></path>
+<path d='M514.7,248 V76.3 Q514.7,73.3 517.7,73.3 H537.7 Q540.7,73.3 540.7,76.3 V248 Z' fill='#c8642a'><title>Naive Apertus prompt · strong: 3.4</title></path>
+<path d='M542.7,248 V96.0 Q542.7,93.0 545.7,93.0 H565.7 Q568.7,93.0 568.7,96.0 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · strong: 3.0</title></path>
+<text x='527.7' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>strong</text>
+<rect x='46' y='284' width='10' height='10' rx='2' fill='#1f6fd1'/>
+<text x='60' y='293' font-size='11' fill='#4b5d6b'>Zusage (Apertus 8B)</text>
+<rect x='211' y='284' width='10' height='10' rx='2' fill='#c8642a'/>
+<text x='225' y='293' font-size='11' fill='#4b5d6b'>Naive Apertus prompt</text>
+<rect x='383' y='284' width='10' height='10' rx='2' fill='#8a9aa6'/>
+<text x='397' y='293' font-size='11' fill='#4b5d6b'>Rule-based baseline</text>
+</svg>

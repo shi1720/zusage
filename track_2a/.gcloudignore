@@ -1,0 +1,13 @@
+.gcloudignore
+.git
+.gitignore
+.env
+.env.*
+**/.venv
+**/__pycache__
+**/node_modules
+**/dist
+**/*.db
+**/.zusage_secret
+.firebase
+firebase-debug.log

@@ -1,0 +1,44 @@
+# Zusage  -  on-premise deployment.
+#
+#   make run                 app only; Apertus via LLM_BASE_URL in .env (CSCS, Public AI, own vLLM…)
+#   make run-local           app + a local Apertus 1.5 8B (llama.cpp, Q4_K_M GGUF, CPU/GPU, ~6 GB)
+#                            → fully sovereign / air-gappable after the first model download
+services:
+  zusage:
+    build: .
+    image: zusage:latest
+    ports:
+      - "${ZUSAGE_PORT:-8080}:8080"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      LLM_NAME: ${LLM_NAME:-swiss-ai/Apertus-v1.5-8B}
+      LLM_BASE_URL: ${LLM_BASE_URL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+    volumes:
+      - zusage-data:/app/var
+    restart: unless-stopped
+
+  apertus:
+    profiles: ["local-llm"]
+    image: ghcr.io/ggml-org/llama.cpp:server
+    command:
+      - "-hf"
+      - "${APERTUS_GGUF:-Colby/apertus-v1.5-8b-text-Q4_K_M-GGUF}"
+      - "--host"
+      - "0.0.0.0"
+      - "--port"
+      - "8000"
+      - "-c"
+      - "16384"
+      - "--jinja"
+    volumes:
+      - apertus-models:/root/.cache
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+volumes:
+  zusage-data:
+  apertus-models:

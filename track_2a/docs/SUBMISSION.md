@@ -1,0 +1,14 @@
+# Submission checklist
+
+- Project: Zusage
+- Track: Track 2A / FHGR
+- Model: Apertus 1.5 8B
+- Live app: https://zusage.web.app
+- Source: https://github.com/shi1720/zusage, default branch `aperture-redesign`
+- Six-page report: `track_2a/Zusage_Report.pdf`
+- Test instructions: `track_2a/docs/TESTING.md`
+- Demo video: upload the reviewed two-minute demo and caption file. Human video approval is required before final submission.
+- Participant: Shivam Gupta, GitHub `shi1720`
+- Swiss student team: confirm with the participant; do not infer eligibility.
+
+The actual Hack Apertus form requests a report and demo video, rather than a Devpost story editor. Keep the project story available for the notes field or another submission platform. Leave final submission and terms acceptance for the approved workflow.

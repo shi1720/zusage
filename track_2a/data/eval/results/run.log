@@ -1,0 +1,180 @@
+• calibration over zusage, naive, rules in de, fr, it, gsw, en
+  calibration 20/342
+  calibration 40/342
+  calibration 60/342
+  calibration 80/342
+  calibration 100/342
+  calibration 120/342
+  calibration 140/342
+  calibration 160/342
+  calibration 180/342
+  calibration 200/342
+  calibration 220/342
+  calibration 240/342
+  calibration 260/342
+  calibration 280/342
+  calibration 300/342
+  calibration 320/342
+  calibration 340/342
+• adversarial set
+  adversarial adv01 (rambling, de)
+  adversarial adv02 (keywords, de)
+  adversarial adv03 (off_topic, de)
+  adversarial adv04 (attitude, de)
+  adversarial adv05 (cliche, de)
+  adversarial adv06 (concise, de)
+  adversarial adv07 (concise, de)
+  adversarial adv08 (l2, de)
+  adversarial adv09 (l2, de)
+  adversarial adv10 (dialect, gsw)
+  adversarial adv11 (dialect, gsw)
+  adversarial adv12 (keywords, gsw)
+  adversarial adv13 (rambling, fr)
+  adversarial adv14 (keywords, fr)
+  adversarial adv15 (off_topic, fr)
+  adversarial adv16 (attitude, fr)
+  adversarial adv17 (concise, fr)
+  adversarial adv18 (cliche, fr)
+  adversarial adv19 (rambling, it)
+  adversarial adv20 (keywords, it)
+  adversarial adv21 (off_topic, it)
+  adversarial adv22 (concise, it)
+  adversarial adv23 (attitude, it)
+  adversarial adv24 (concise, it)
+  adversarial adv25 (rambling, en)
+  adversarial adv26 (concise, en)
+  adversarial adv27 (attitude, en)
+  adversarial adv28 (concise, de)
+  adversarial adv29 (attitude, de)
+  adversarial adv30 (concise, de)
+• full interviews with zusage
+  interview 1: lea de nervous_then_warm → overall 29, 1.11 calls/answer
+  interview 2: lea de steady → overall 41, 1.12 calls/answer
+  interview 3: lea de strong → overall 57, 1.11 calls/answer
+  interview 4: lea de struggling → overall 13, 1.12 calls/answer
+  interview 5: noah de nervous_then_warm → overall 29, 1.11 calls/answer
+  interview 6: noah de steady → overall 28, 1.11 calls/answer
+  interview 7: noah de strong → overall 55, 1.11 calls/answer
+  interview 8: noah de struggling → overall 19, 1.14 calls/answer
+  interview 9: elif gsw nervous_then_warm → overall 33, 1.11 calls/answer
+  interview 10: elif gsw steady → overall 23, 1.11 calls/answer
+  interview 11: elif gsw strong → overall 56, 1.11 calls/answer
+  interview 12: elif gsw struggling → overall 17, 1.12 calls/answer
+  interview 13: luca it nervous_then_warm → overall 30, 1.11 calls/answer
+  interview 14: luca it steady → overall 39, 1.11 calls/answer
+  interview 15: luca it strong → overall 53, 1.11 calls/answer
+  interview 16: luca it struggling → overall 22, 1.14 calls/answer
+  interview 17: chloe fr nervous_then_warm → overall 32, 1.11 calls/answer
+  interview 18: chloe fr steady → overall 34, 1.12 calls/answer
+  interview 19: chloe fr strong → overall 54, 1.12 calls/answer
+  interview 20: chloe fr struggling → overall 17, 1.12 calls/answer
+  interview 21: amar de nervous_then_warm → overall 34, 1.11 calls/answer
+  interview 22: amar de steady → overall 28, 1.11 calls/answer
+  interview 23: amar de strong → overall 52, 1.12 calls/answer
+  interview 24: amar de struggling → overall 23, 1.12 calls/answer
+  interview 25: mara de nervous_then_warm → overall 33, 1.11 calls/answer
+  interview 26: mara de steady → overall 33, 1.11 calls/answer
+  interview 27: mara de strong → overall 59, 1.11 calls/answer
+  interview 28: mara de struggling → overall 19, 1.12 calls/answer
+  interview 29: giulia it nervous_then_warm → overall 36, 1.11 calls/answer
+  interview 30: giulia it steady → overall 32, 1.11 calls/answer
+  interview 31: giulia it strong → overall 42, 1.11 calls/answer
+  interview 32: giulia it struggling → overall 18, 1.12 calls/answer
+• full interviews with rules
+  interview 1: lea de nervous_then_warm → overall 34, 0.0 calls/answer
+  interview 2: lea de steady → overall 34, 0.0 calls/answer
+  interview 3: lea de strong → overall 62, 0.0 calls/answer
+  interview 4: lea de struggling → overall 9, 0.0 calls/answer
+  interview 5: noah de nervous_then_warm → overall 34, 0.0 calls/answer
+  interview 6: noah de steady → overall 34, 0.0 calls/answer
+  interview 7: noah de strong → overall 62, 0.0 calls/answer
+  interview 8: noah de struggling → overall 5, 0.0 calls/answer
+  interview 9: elif gsw nervous_then_warm → overall 31, 0.0 calls/answer
+  interview 10: elif gsw steady → overall 23, 0.0 calls/answer
+  interview 11: elif gsw strong → overall 52, 0.0 calls/answer
+  interview 12: elif gsw struggling → overall 9, 0.0 calls/answer
+  interview 13: luca it nervous_then_warm → overall 17, 0.0 calls/answer
+  interview 14: luca it steady → overall 30, 0.0 calls/answer
+  interview 15: luca it strong → overall 65, 0.0 calls/answer
+  interview 16: luca it struggling → overall 10, 0.0 calls/answer
+  interview 17: chloe fr nervous_then_warm → overall 31, 0.0 calls/answer
+  interview 18: chloe fr steady → overall 24, 0.0 calls/answer
+  interview 19: chloe fr strong → overall 66, 0.0 calls/answer
+  interview 20: chloe fr struggling → overall 5, 0.0 calls/answer
+  interview 21: amar de nervous_then_warm → overall 34, 0.0 calls/answer
+  interview 22: amar de steady → overall 35, 0.0 calls/answer
+  interview 23: amar de strong → overall 62, 0.0 calls/answer
+  interview 24: amar de struggling → overall 9, 0.0 calls/answer
+  interview 25: mara de nervous_then_warm → overall 37, 0.0 calls/answer
+  interview 26: mara de steady → overall 36, 0.0 calls/answer
+  interview 27: mara de strong → overall 63, 0.0 calls/answer
+  interview 28: mara de struggling → overall 9, 0.0 calls/answer
+  interview 29: giulia it nervous_then_warm → overall 17, 0.0 calls/answer
+  interview 30: giulia it steady → overall 30, 0.0 calls/answer
+  interview 31: giulia it strong → overall 65, 0.0 calls/answer
+  interview 32: giulia it struggling → overall 10, 0.0 calls/answer
+• LLM-as-judge with apertus-v1.5-70b
+  judged 1/64
+  judged 2/64
+  judged 3/64
+  judged 4/64
+  judged 5/64
+  judged 6/64
+  judged 7/64
+  judged 8/64
+  judged 9/64
+  judged 10/64
+  judged 11/64
+  judged 12/64
+  judged 13/64
+  judged 14/64
+  judged 15/64
+  judged 16/64
+  judged 17/64
+  judged 18/64
+  judged 19/64
+  judged 20/64
+  judged 21/64
+  judged 22/64
+  judged 23/64
+  judged 24/64
+  judged 25/64
+  judged 26/64
+  judged 27/64
+  judged 28/64
+  judged 29/64
+  judged 30/64
+  judged 31/64
+  judged 32/64
+  judged 33/64
+  judged 34/64
+  judged 35/64
+  judged 36/64
+  judged 37/64
+  judged 38/64
+  judged 39/64
+  judged 40/64
+  judged 41/64
+  judged 42/64
+  judged 43/64
+  judged 44/64
+  judged 45/64
+  judged 46/64
+  judged 47/64
+  judged 48/64
+  judged 49/64
+  judged 50/64
+  judged 51/64
+  judged 52/64
+  judged 53/64
+  judged 54/64
+  judged 55/64
+  judged 56/64
+  judged 57/64
+  judged 58/64
+  judged 59/64
+  judged 60/64
+  judged 61/64
+  judged 62/64
+  judged 63/64
+  judged 64/64

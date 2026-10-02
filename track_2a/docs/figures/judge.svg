@@ -1,0 +1,44 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 760 300' font-family='Atkinson Hyperlegible, Helvetica, Arial, sans-serif'>
+<rect width='760' height='300' fill='#fff'/>
+<text x='46' y='22' font-size='14' font-weight='700' fill='#16232e'>LLM-judge (apertus-v1.5-70b) — 1–5 per dimension</text>
+<line x1='46' x2='744' y1='248.0' y2='248.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='252.0' font-size='10' text-anchor='end' fill='#7d8f9c'>0</text>
+<line x1='46' x2='744' y1='206.4' y2='206.4' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='210.4' font-size='10' text-anchor='end' fill='#7d8f9c'>1</text>
+<line x1='46' x2='744' y1='164.8' y2='164.8' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='168.8' font-size='10' text-anchor='end' fill='#7d8f9c'>2</text>
+<line x1='46' x2='744' y1='123.2' y2='123.2' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='127.2' font-size='10' text-anchor='end' fill='#7d8f9c'>3</text>
+<line x1='46' x2='744' y1='81.6' y2='81.6' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='85.6' font-size='10' text-anchor='end' fill='#7d8f9c'>4</text>
+<line x1='46' x2='744' y1='40.0' y2='40.0' stroke='#d3dce3' stroke-width='0.8'/>
+<text x='40' y='44.0' font-size='10' text-anchor='end' fill='#7d8f9c'>5</text>
+<path d='M62.6,248 V87.1 Q62.6,84.1 65.6,84.1 H85.6 Q88.6,84.1 88.6,87.1 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · realism: 4</title></path>
+<path d='M90.6,248 V109.1 Q90.6,106.1 93.6,106.1 H113.6 Q116.6,106.1 116.6,109.1 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · realism: 3</title></path>
+<text x='89.6' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>realism</text>
+<path d='M149.9,248 V85.8 Q149.9,82.8 152.9,82.8 H172.9 Q175.9,82.8 175.9,85.8 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · relevance: 4</title></path>
+<path d='M177.9,248 V91.3 Q177.9,88.3 180.9,88.3 H200.9 Q203.9,88.3 203.9,91.3 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · relevance: 4</title></path>
+<text x='176.9' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>relevance</text>
+<path d='M237.1,248 V98.7 Q237.1,95.7 240.1,95.7 H260.1 Q263.1,95.7 263.1,98.7 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · adaptivity: 4</title></path>
+<path d='M265.1,248 V144.5 Q265.1,141.5 268.1,141.5 H288.1 Q291.1,141.5 291.1,144.5 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · adaptivity: 3</title></path>
+<text x='264.1' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>adaptivity</text>
+<path d='M324.4,248 V89.6 Q324.4,86.6 327.4,86.6 H347.4 Q350.4,86.6 350.4,89.6 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · specificity: 4</title></path>
+<path d='M352.4,248 V166.6 Q352.4,163.6 355.4,163.6 H375.4 Q378.4,163.6 378.4,166.6 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · specificity: 2</title></path>
+<text x='351.4' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>specificity</text>
+<path d='M411.6,248 V93.8 Q411.6,90.8 414.6,90.8 H434.6 Q437.6,90.8 437.6,93.8 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · actionability: 4</title></path>
+<path d='M439.6,248 V170.3 Q439.6,167.3 442.6,167.3 H462.6 Q465.6,167.3 465.6,170.3 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · actionability: 2</title></path>
+<text x='438.6' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>actionability</text>
+<path d='M498.9,248 V71.7 Q498.9,68.7 501.9,68.7 H521.9 Q524.9,68.7 524.9,71.7 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · constructiveness: 4</title></path>
+<path d='M526.9,248 V92.5 Q526.9,89.5 529.9,89.5 H549.9 Q552.9,89.5 552.9,92.5 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · constructiveness: 4</title></path>
+<text x='525.9' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>constructiveness</text>
+<path d='M586.1,248 V43.0 Q586.1,40.0 589.1,40.0 H609.1 Q612.1,40.0 612.1,43.0 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · faithfulness: 5</title></path>
+<path d='M614.1,248 V45.5 Q614.1,42.5 617.1,42.5 H637.1 Q640.1,42.5 640.1,45.5 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · faithfulness: 5</title></path>
+<text x='613.1' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>faithfulness</text>
+<path d='M673.4,248 V44.2 Q673.4,41.2 676.4,41.2 H696.4 Q699.4,41.2 699.4,44.2 V248 Z' fill='#1f6fd1'><title>Zusage (Apertus 8B) · language: 5</title></path>
+<path d='M701.4,248 V44.2 Q701.4,41.2 704.4,41.2 H724.4 Q727.4,41.2 727.4,44.2 V248 Z' fill='#8a9aa6'><title>Rule-based baseline · language: 5</title></path>
+<text x='700.4' y='266' font-size='11' text-anchor='middle' fill='#4b5d6b'>language</text>
+<rect x='46' y='284' width='10' height='10' rx='2' fill='#1f6fd1'/>
+<text x='60' y='293' font-size='11' fill='#4b5d6b'>Zusage (Apertus 8B)</text>
+<rect x='211' y='284' width='10' height='10' rx='2' fill='#8a9aa6'/>
+<text x='225' y='293' font-size='11' fill='#4b5d6b'>Rule-based baseline</text>
+</svg>

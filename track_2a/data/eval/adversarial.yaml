@@ -1,0 +1,49 @@
+# Zusage adversarial calibration set
+# ---------------------------------------------------------------------------
+# Items where SURFACE features lie about quality, so keyword/length heuristics
+# fail and real understanding is required:
+#   rambling     - long, fluent, but generic: no reason, no example        → weak
+#   keywords     - stuffed with "good" words (Beispiel, Stärke, motiviert…)
+#                  but no actual content                                   → weak
+#   off_topic    - fluent answer to a DIFFERENT question                    → weak
+#   attitude     - inappropriate tone / external motivation only           → weak
+#   cliche       - interview clichés ("I'm a perfectionist")                → weak
+#   concise      - short but concrete, specific and well-structured        → strong
+#   dialect      - strong content written in Swiss German dialect          → strong
+#   l2           - strong content with non-native grammar mistakes
+#                  (fairness: second-language speakers must not be
+#                   penalised on content criteria)                         → strong
+# Gold level: weak | strong. Authored by the Zusage team; CDLA-Permissive-2.0.
+version: "1.0"
+
+items:
+  - {id: adv01, qid: mot_why_occupation, lang: de, kind: rambling, level: weak, answer: "Also ich finde, dass dieser Beruf eigentlich sehr interessant ist, weil man da halt viele verschiedene Sachen machen kann und es ist auch ein Beruf mit Zukunft, das sagen ja alle, und ich denke, dass ich das sicher gut machen würde, weil ich eigentlich schon motiviert bin und Lust habe, etwas Neues zu lernen, und das ist ja auch wichtig heutzutage, dass man etwas lernt."}
+  - {id: adv02, qid: str_strengths, lang: de, kind: keywords, level: weak, answer: "Meine Stärken sind Teamfähigkeit, Zuverlässigkeit, Motivation, Pünktlichkeit, Flexibilität, Belastbarkeit und zum Beispiel Kommunikation. Ich bin sehr motiviert und habe viele Stärken."}
+  - {id: adv03, qid: sit_team_conflict, lang: de, kind: off_topic, level: weak, answer: "Ich spiele seit fünf Jahren Volleyball im Verein in Chur und wir trainieren zweimal pro Woche in der Turnhalle. Letzte Saison sind wir aufgestiegen, und am Wochenende fahren wir oft an Turniere in der ganzen Schweiz."}
+  - {id: adv04, qid: mot_why_occupation, lang: de, kind: attitude, level: weak, answer: "Ehrlich gesagt weiss ich nicht so recht, meine Eltern wollen das halt. Und man verdient als Lernender schon ein bisschen Geld, das ist ja auch gut. Anderes hat leider nicht geklappt."}
+  - {id: adv05, qid: str_weakness, lang: de, kind: cliche, level: weak, answer: "Meine grösste Schwäche ist, dass ich ein Perfektionist bin und manchmal zu viel arbeite. Ich bin einfach zu ehrgeizig und gebe immer hundert Prozent."}
+  - {id: adv06, qid: str_strengths, lang: de, kind: concise, level: strong, answer: "Geduld. Letzten Sommer habe ich meinem Grossvater beigebracht, Videoanrufe zu machen - fünf Anläufe, jetzt ruft er uns jeden Sonntag selbst an."}
+  - {id: adv07, qid: sit_mistake, lang: de, kind: concise, level: strong, answer: "Sofort meiner Berufsbildnerin melden, auch wenn's peinlich ist. In der Schnupperlehre habe ich ein Etikett falsch geklebt, es gleich gesagt - so konnten wir es korrigieren, bevor die Ware rausging."}
+  - {id: adv08, qid: mot_why_occupation, lang: de, kind: l2, level: strong, answer: "Ich will Koch werden weil ich koche jeden Sonntag für meine Familie, sieben Personen. In Schnupperlehre im Hotel ich habe Gemüse geschnitten und der Chef hat gesagt mein Brunoise ist sauber. Das hat mich sehr stolz gemacht und ich will mehr lernen."}
+  - {id: adv09, qid: sit_team_conflict, lang: de, kind: l2, level: strong, answer: "In Gruppenarbeit zwei Kollegen haben gestritten wer präsentiert. Ich habe vorgeschlagen, jeder macht ein Teil und ich mache die Folien fertig. Am Schluss wir haben Note 5 bekommen und alle waren zufrieden."}
+  - {id: adv10, qid: mot_why_occupation, lang: gsw, kind: dialect, level: strong, answer: "Im Sportgschäft han ich bi de Schnupperlehr ere Frau d'Laufschueh berate – ich han gfragt, wie viel sie lauft und wo. Am Schluss hät sie gseit, sie chömi wieder zu mir. Genau das wett ich jede Tag mache."}
+  - {id: adv11, qid: str_weakness, lang: gsw, kind: dialect, level: strong, answer: "Ich bi am Afang schüch. Drum han ich mir i de Schnupperlehr vorgnoh, jede Tag mindestens ei Frag z'stelle. Am dritte Tag han ich scho sälber Chunde aagsproche."}
+  - {id: adv12, qid: str_strengths, lang: gsw, kind: keywords, level: weak, answer: "Ich bi teamfähig, zueverlässig, motiviert, pünktlich und flexibel. Das sind mini Stärche, zum Bispiel."}
+  - {id: adv13, qid: mot_why_occupation, lang: fr, kind: rambling, level: weak, answer: "Alors, je pense que c'est un métier vraiment intéressant parce qu'on peut faire beaucoup de choses différentes et c'est un métier d'avenir, tout le monde le dit, et je pense que je serais bonne dans ce domaine parce que je suis motivée et que j'ai envie d'apprendre de nouvelles choses, ce qui est important aujourd'hui."}
+  - {id: adv14, qid: str_strengths, lang: fr, kind: keywords, level: weak, answer: "Mes points forts sont l'esprit d'équipe, la fiabilité, la motivation, la ponctualité, la flexibilité et la communication, par exemple. Je suis très motivée."}
+  - {id: adv15, qid: sit_mistake, lang: fr, kind: off_topic, level: weak, answer: "Pendant mon temps libre je fais du karting avec mon père, on va souvent sur la piste de Vuiteboeuf le samedi et j'aime beaucoup la vitesse et les virages."}
+  - {id: adv16, qid: mot_why_occupation, lang: fr, kind: attitude, level: weak, answer: "Franchement je sais pas trop, c'est mes parents qui veulent. Et puis on gagne un peu d'argent, c'est déjà ça. Le reste n'a pas marché."}
+  - {id: adv17, qid: str_strengths, lang: fr, kind: concise, level: strong, answer: "La persévérance. Un dérailleur sautait sur le vélo de ma voisine : deux soirées de recherche, câble abîmé trouvé et changé. Elle roule à nouveau."}
+  - {id: adv18, qid: str_weakness, lang: fr, kind: cliche, level: weak, answer: "Mon plus grand défaut, c'est que je suis trop perfectionniste et que je travaille trop. Je donne toujours cent pour cent."}
+  - {id: adv19, qid: mot_why_occupation, lang: it, kind: rambling, level: weak, answer: "Allora, secondo me è un lavoro molto interessante perché si possono fare tante cose diverse ed è anche un lavoro con un futuro, lo dicono tutti, e penso che lo farei sicuramente bene perché sono motivato e ho voglia di imparare cose nuove, che oggi è importante."}
+  - {id: adv20, qid: str_strengths, lang: it, kind: keywords, level: weak, answer: "I miei punti di forza sono lavoro di squadra, affidabilità, motivazione, puntualità, flessibilità e comunicazione, per esempio. Sono molto motivato."}
+  - {id: adv21, qid: sit_team_conflict, lang: it, kind: off_topic, level: weak, answer: "Nel tempo libero aiuto mio nonno in giardino, coltiviamo pomodori e zucchine e d'estate andiamo spesso al lago di Lugano a nuotare con i miei cugini."}
+  - {id: adv22, qid: str_strengths, lang: it, kind: concise, level: strong, answer: "Affidabilità. Da due anni preparo il materiale per ogni allenamento della squadra senza dimenticare niente: l'allenatore mi ha dato le chiavi dello spogliatoio."}
+  - {id: adv23, qid: mot_why_occupation, lang: it, kind: attitude, level: weak, answer: "Sinceramente non lo so, lo vogliono i miei genitori. E poi si guadagna qualcosa. Il resto non è andato."}
+  - {id: adv24, qid: str_weakness, lang: it, kind: concise, level: strong, answer: "Sono timido con chi non conosco. Quest'anno mi sono offerto di presentare un progetto alla classe: ero nervoso, ma è andata bene e ora parlo più facilmente."}
+  - {id: adv25, qid: mot_why_occupation, lang: en, kind: rambling, level: weak, answer: "Well, I think it's a really interesting job because you can do lots of different things and it's a job with a future, everyone says so, and I think I'd definitely be good at it because I'm motivated and want to learn new things, which is important nowadays."}
+  - {id: adv26, qid: str_strengths, lang: en, kind: concise, level: strong, answer: "Persistence. Our class server kept crashing; I read the logs for two evenings, found a plugin conflict, removed it - stable for the rest of the year."}
+  - {id: adv27, qid: sit_mistake, lang: en, kind: attitude, level: weak, answer: "Honestly I'd just hope nobody notices. Everyone makes mistakes, it's not a big deal, and it's not really my job to fix it if nobody told me how."}
+  - {id: adv28, qid: cand_questions, lang: de, kind: concise, level: strong, answer: "Ja: Wie sieht bei Ihnen der erste Arbeitstag aus? Und gibt es die Möglichkeit, die BM während der Lehre zu machen?"}
+  - {id: adv29, qid: cand_questions, lang: de, kind: attitude, level: weak, answer: "Wie viel Ferien habe ich und wie viel verdiene ich? Muss ich am Samstag arbeiten? Kann ich früher gehen, wenn ich fertig bin?"}
+  - {id: adv30, qid: sit_stress, lang: de, kind: concise, level: strong, answer: "Mit einem Plan. In der Prüfungswoche mit zwei Turnieren habe ich täglich eine Stunde gelernt und das Training reduziert - alle Prüfungen bestanden."}

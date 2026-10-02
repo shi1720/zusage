@@ -1,0 +1,241 @@
+# Zusage answer bank - synthetic candidate answers at three quality levels
+# ---------------------------------------------------------------------------
+# Purpose
+#   1. Calibration benchmark: does the coach rank weak < solid < strong?
+#      (Spearman correlation between the gold level and the coach's score -
+#      an objective metric that needs no LLM judge.)
+#   2. Scripted candidates for deterministic end-to-end evaluation runs.
+#   3. Demo seed data (clearly labelled as synthetic in the UI).
+#
+# Authoring guideline (didactic annotation, derived from the rubric anchors):
+#   weak   - one-liner / generic / no reason / no example; typical nervous answer
+#   solid  - answers the question with a reason, but example vague or missing
+#   strong - clear main point + concrete situation (when/where/what) + own
+#            action + result or link to the apprenticeship (STAR-like)
+#
+# All answers are fictional, written by the Zusage team (Shivam Gupta)
+# for a 15-year-old voice. Licence: CDLA-Permissive-2.0.
+# Keys: question id -> language -> level. `_situational` / `_motivation` are
+# fallbacks for occupation-specific questions without dedicated answers.
+version: "1.0"
+
+answers:
+  intro_about_you:
+    de:
+      weak: "Ich bin 15 und gehe in die Sek. Ich gamen gern."
+      solid: "Ich heisse Lea, bin 15 Jahre alt und gehe in Chur in die 3. Sek. In meiner Freizeit spiele ich Volleyball und treffe gern Freundinnen."
+      strong: "Ich bin Lea, 15 Jahre alt, und gehe in Chur in die 3. Sek A. Zweimal pro Woche trainiere ich Volleyball im Verein, dort bin ich seit diesem Jahr Captain. Ausserdem passe ich regelmässig auf meine zwei kleinen Cousins auf - dabei habe ich gemerkt, dass ich gern Verantwortung für andere übernehme."
+    fr:
+      weak: "J'ai 15 ans. J'aime bien les jeux vidéo."
+      solid: "Je m'appelle Chloé, j'ai 16 ans et je suis en 11e année à Lausanne. Pendant mon temps libre, je fais du karting et je répare des vélos."
+      strong: "Je m'appelle Chloé, j'ai 16 ans et je termine la 11e VG à Lausanne. Le week-end, je répare des vélos avec mon père dans notre garage : le mois passé, j'ai remis en état un vieux vélo pour ma voisine. C'est là que j'ai compris que j'adore trouver la panne et la réparer."
+    it:
+      weak: "Ho 15 anni. Gioco a calcio."
+      solid: "Mi chiamo Luca, ho 15 anni e faccio la quarta media a Bellinzona. Nel tempo libero gioco a calcio e aiuto mio nonno in giardino."
+      strong: "Mi chiamo Luca, ho 15 anni e frequento la quarta media a Bellinzona. Gioco a calcio da sette anni e non ho mai saltato un allenamento senza avvisare. Il sabato aiuto mio nonno a sistemare il suo deposito: abbiamo riordinato tutto con etichette e adesso troviamo subito gli attrezzi."
+    gsw:
+      weak: "Ich bi d'Elif und bi 15."
+      solid: "Ich bi d'Elif, bi 15 und gang in Winterthur id Sek B. I de Freiziit mach ich gern TikTok-Videos über Mode."
+      strong: "Ich bi d'Elif, 15 Jahr alt und gang in Winterthur id Sek B. Am Samschtig hilf ich im Kiosk vo mim Onkel: ich bediene Chunde, rüme d'Ware i und mach d'Kasse. Det han ich gmerkt, dass ich gern mit Lüüt rede und ihne hilf."
+    en:
+      weak: "I'm 15. I like gaming."
+      solid: "My name is Noah, I'm 16 and in my last year of secondary school in St. Gallen. I like gaming and playing unihockey."
+      strong: "I'm Noah, 16, finishing secondary school in St. Gallen. Last year I set up a Minecraft server for my whole class: I configured it, wrote rules and fixed crashes when 25 people were online. That project showed me that I love solving technical problems for other people."
+
+  mot_why_occupation:
+    de:
+      weak: "Weil es mir gefällt."
+      solid: "Ich möchte diese Lehre machen, weil ich gern mit Menschen arbeite und anderen helfen will."
+      strong: "In meiner Schnupperlehre im Pflegeheim Landquart durfte ich einer älteren Frau beim Mittagessen helfen. Sie hat mir danach von früher erzählt und sich bedankt - da habe ich gemerkt, wie sinnvoll diese Arbeit ist. Darum will ich Fachfrau Gesundheit werden: ich möchte Menschen im Alltag unterstützen und gleichzeitig medizinisch etwas lernen."
+    fr:
+      weak: "Parce que c'est bien."
+      solid: "Je veux faire cet apprentissage parce que j'aime la mécanique et les voitures."
+      strong: "Pendant mon stage d'observation dans un garage à Renens, j'ai aidé à diagnostiquer une voiture hybride avec l'ordinateur. Comprendre d'où venait la panne m'a passionnée. Je veux devenir mécatronicienne parce que j'aime le travail manuel et que les voitures électriques sont l'avenir."
+    it:
+      weak: "Perché mi piace."
+      solid: "Voglio fare questo apprendistato perché mi piace lavorare in modo pratico e ordinato."
+      strong: "Durante lo stage di due giorni in un magazzino ho preparato delle ordinazioni con lo scanner. Mi è piaciuto che alla fine della giornata si vede subito il risultato del proprio lavoro. Per questo voglio diventare addetto alla logistica: sono preciso, mi piace muovermi e lavorare in squadra."
+    gsw:
+      weak: "Will's mir gfallt."
+      solid: "Ich wett die Lehr mache, will ich gern mit Chunde rede und Mode mag."
+      strong: "Ich han e Schnupperlehr imene Sportgschäft gmacht. Det han ich ere Chundin gholfe, d'Laufschueh z'finde, und am Schluss hät sie gseit, ich heg sie super berate. Das hät mich mega gfreut. Drum wett ich Detailhandelsfachfrau wärde: ich rede gern mit Lüüt und will ihne öppis Passends finde."
+    en:
+      weak: "Because computers are cool."
+      solid: "I want to do this apprenticeship because I like computers and programming."
+      strong: "During my two-day trial at a software company I fixed a small bug in an internal tool with a developer. Seeing my change work for the whole team was a great feeling. That's why I want to become an IT specialist: I like logical problems and building things people actually use."
+
+  mot_schnupper:
+    de:
+      weak: "Ja, das war gut."
+      solid: "Ja, ich habe drei Tage geschnuppert. Ich habe beim Essen geholfen und Betten gemacht. Es hat mir gefallen."
+      strong: "Ja, drei Tage im Pflegeheim in Landquart. Am ersten Tag war ich unsicher, wie ich mit den Bewohnern reden soll. Am zweiten Tag habe ich bei der Körperpflege zugeschaut und gemerkt, wie wichtig Geduld und Respekt sind. Am Schluss hat mir die Berufsbildnerin gesagt, ich solle mich bewerben - das hat mich bestärkt."
+    fr:
+      weak: "Oui, c'était cool."
+      solid: "Oui, j'ai fait un stage dans un garage. J'ai changé des roues et regardé les mécaniciens travailler."
+      strong: "Oui, trois jours dans un garage à Renens. J'ai changé des pneus, mais surtout j'ai assisté à un diagnostic électronique. J'ai appris qu'il faut être très méthodique : on vérifie étape par étape. Le chef d'atelier m'a dit que j'avais posé de bonnes questions."
+    it:
+      weak: "Sì, era bello."
+      solid: "Sì, ho fatto uno stage in un magazzino. Ho aiutato a preparare i pacchi."
+      strong: "Sì, due giorni in un magazzino a Cadenazzo. Ho imparato a usare lo scanner e a preparare le ordinazioni. Una volta ho notato un errore nell'etichetta e l'ho detto subito al responsabile: mi ha ringraziato perché il pacco sarebbe partito all'indirizzo sbagliato."
+
+  mot_why_company:
+    de:
+      weak: "Weil es nah ist."
+      solid: "Ich habe mich bei Ihnen beworben, weil Sie einen guten Ruf haben und viele Lernende ausbilden."
+      strong: "Ich habe auf Ihrer Website gelesen, dass die Lernenden durch verschiedene Abteilungen rotieren und eine eigene Berufsbildnerin haben. Das ist mir wichtig, weil ich möglichst viel sehen möchte. Ausserdem hat mir eine Kollegin, die bei Ihnen im zweiten Lehrjahr ist, erzählt, wie gut sie unterstützt wird."
+    fr:
+      weak: "Parce que c'est proche de chez moi."
+      solid: "J'ai postulé chez vous parce que vous travaillez sur des voitures électriques."
+      strong: "J'ai vu sur votre site que vous êtes spécialisés dans les hybrides et l'électrique et que les apprentis apprennent la sécurité haute tension. C'est exactement ce qui m'intéresse. Et pendant la journée portes ouvertes, j'ai trouvé l'ambiance dans l'atelier très motivante."
+    it:
+      weak: "Perché è vicino."
+      solid: "Mi sono candidato da voi perché siete un'azienda grande e conosciuta."
+      strong: "Ho letto che da voi gli apprendisti fanno anche il permesso per il carrello elevatore e che i migliori possono continuare con l'AFC. Mi piace l'idea di poter crescere. Inoltre il vostro centro logistico è raggiungibile in bus in 20 minuti da casa mia."
+
+  mot_future:
+    de:
+      weak: "Weiss ich noch nicht."
+      solid: "Nach der Lehre möchte ich zuerst Erfahrung sammeln und vielleicht später eine Weiterbildung machen."
+      strong: "Mein Ziel ist, die Lehre gut abzuschliessen und wenn möglich die BM2 anzuhängen. Danach könnte ich mir ein Studium an einer Fachhochschule vorstellen, zum Beispiel Pflege. Darum lerne ich jetzt schon jeden Abend 20 Minuten Mathe."
+
+  str_strengths:
+    de:
+      weak: "Ich bin nett."
+      solid: "Ich bin zuverlässig und hilfsbereit. Ich komme immer pünktlich."
+      strong: "Eine Stärke ist meine Geduld. Als Babysitterin für meine zwei Cousins muss ich oft ruhig bleiben, wenn sie streiten. Letzte Woche habe ich ihnen ein Spiel vorgeschlagen, bei dem beide gewinnen konnten - danach war Ruhe. Diese Geduld brauche ich auch im Umgang mit Patientinnen."
+    fr:
+      weak: "Je suis sympa."
+      solid: "Je suis motivée et précise. J'aime bien finir ce que je commence."
+      strong: "Ma force, c'est la persévérance. Quand une réparation de vélo ne marche pas, je ne lâche pas : le mois dernier, j'ai cherché pendant deux soirs pourquoi un dérailleur sautait, jusqu'à trouver que le câble était abîmé. Cette patience me servira au garage."
+    it:
+      weak: "Sono gentile."
+      solid: "Sono affidabile e puntuale. Mi piace aiutare."
+      strong: "Il mio punto di forza è l'affidabilità. Nella squadra di calcio sono quello che prepara il materiale prima di ogni allenamento, da due anni senza dimenticare niente. L'allenatore mi ha affidato anche le chiavi dello spogliatoio."
+    gsw:
+      weak: "Ich bi nett."
+      solid: "Ich bi offe und red gern mit Lüüt."
+      strong: "Mini Stärchi isch, dass ich offe bin. Im Kiosk vo mim Onkel han ich mal e Chundin gha, wo sich gärgeret hät, will ihri Zitig gfehlt hät. Ich bin fründlich blibe, han ihre e anderi zeigt und sie isch zfride gange."
+    en:
+      weak: "I'm smart."
+      solid: "I'm good at logical thinking and I learn fast."
+      strong: "My strength is persistence with technical problems. When our class server kept crashing, I read the logs for two evenings until I found a plugin conflict, removed it, and the server ran stable for the rest of the year."
+
+  str_weakness:
+    de:
+      weak: "Ich habe keine Schwächen."
+      solid: "Ich bin manchmal ein bisschen ungeduldig."
+      strong: "Ich bin am Anfang oft schüchtern und rede wenig. In der Schnupperlehre habe ich mir deshalb vorgenommen, jeden Tag mindestens eine Frage zu stellen. Das hat geholfen - am dritten Tag habe ich mich viel wohler gefühlt."
+    fr:
+      weak: "Je suis perfectionniste."
+      solid: "Parfois, je suis un peu trop directe."
+      strong: "Parfois je parle trop vite et trop directement. J'y travaille : avant de répondre, je prends une seconde pour réfléchir. Au stage, ça m'a aidée à expliquer calmement à un client pourquoi on devait garder sa voiture un jour de plus."
+    it:
+      weak: "Non ho debolezze."
+      solid: "A volte sono un po' timido."
+      strong: "Sono un po' timido quando non conosco le persone. Per migliorare, quest'anno mi sono offerto di presentare un progetto davanti alla classe. Ero nervoso, ma è andata bene e adesso parlo più facilmente."
+
+  str_friends:
+    de:
+      weak: "Lustig, nett, cool."
+      solid: "Hilfsbereit, lustig und zuverlässig."
+      strong: "Hilfsbereit, ruhig und organisiert. Hilfsbereit, weil ich bei Gruppenarbeiten oft anderen erkläre, was sie nicht verstehen. Organisiert, weil ich für unseren Klassenausflug die Liste geführt habe, wer was mitbringt."
+
+  sit_team_conflict:
+    de:
+      weak: "Da habe ich nichts gemacht."
+      solid: "Bei einer Gruppenarbeit haben zwei gestritten. Ich habe gesagt, dass wir weitermachen sollen."
+      strong: "Bei einem Schulprojekt wollte einer alles allein machen und die anderen waren sauer. Ich habe vorgeschlagen, dass wir die Aufgaben aufschreiben und verteilen. Ich habe mit ihm zuerst allein geredet, weil ich wusste, dass er es gut meint. Am Ende hatten wir eine 5,5 und alle waren zufrieden."
+    fr:
+      weak: "Je ne sais pas."
+      solid: "Dans un travail de groupe, deux élèves se disputaient. J'ai essayé de les calmer."
+      strong: "Lors d'un exposé en groupe, deux camarades n'étaient pas d'accord sur le sujet. J'ai proposé que chacun présente son idée en deux minutes, puis on a voté. J'ai aussi pris en charge la partie que personne ne voulait. On a eu une bonne note et on est restés amis."
+    it:
+      weak: "Non mi ricordo."
+      solid: "Nella squadra due compagni litigavano. Ho detto all'allenatore."
+      strong: "Nella mia squadra due compagni litigavano per chi doveva tirare i rigori. Ho proposto di decidere in base agli allenamenti della settimana. L'allenatore ha accettato e la squadra è tornata tranquilla. Ho imparato che una regola chiara evita discussioni."
+
+  sit_mistake:
+    de:
+      weak: "Ich sage nichts."
+      solid: "Ich würde es meinem Chef sagen und mich entschuldigen."
+      strong: "Ich würde den Fehler sofort meiner Berufsbildnerin melden, auch wenn es mir peinlich ist, damit kein grösserer Schaden entsteht. Dann frage ich, wie ich es richtig mache, und schreibe es mir auf. In der Schnupperlehre habe ich einmal falsch etikettiert und es direkt gesagt - das wurde geschätzt."
+    fr:
+      weak: "Je cache l'erreur."
+      solid: "Je le dis à mon formateur et je m'excuse."
+      strong: "Je le signale tout de suite à mon formateur, même si c'est gênant, pour qu'on puisse corriger rapidement. Ensuite je demande comment faire juste et je le note. Au stage, j'avais mal rangé une pièce et je l'ai dit directement : le mécanicien m'a remerciée."
+    it:
+      weak: "Niente."
+      solid: "Lo dico al mio responsabile e chiedo scusa."
+      strong: "Lo direi subito al mio formatore, anche se mi vergogno, così si può rimediare in fretta. Poi chiederei come fare correttamente e me lo annoterei. Durante lo stage ho sbagliato un'etichetta e l'ho detto subito: il responsabile mi ha ringraziato."
+
+  sit_stress:
+    de:
+      weak: "Ich habe keinen Stress."
+      solid: "Wenn ich Stress habe, mache ich eine Liste und höre Musik."
+      strong: "Vor der letzten Prüfungswoche hatte ich auch noch Volleyball-Turniere. Ich habe mir einen Plan gemacht, jeden Tag eine Stunde gelernt und am Wochenende das Training reduziert. So habe ich alle Prüfungen geschafft. Das will ich auch in der Lehre so machen."
+
+  cand_questions:
+    de:
+      weak: "Nein."
+      solid: "Wie viele Lernende haben Sie?"
+      strong: "Ja, zwei Fragen: Wie sieht ein typischer Tag im ersten Lehrjahr aus? Und gibt es bei Ihnen die Möglichkeit, die Berufsmaturität während der Lehre zu machen?"
+    fr:
+      weak: "Non."
+      solid: "Combien d'apprentis avez-vous ?"
+      strong: "Oui : à quoi ressemble une journée typique en première année ? Et est-ce que les apprentis peuvent travailler sur les voitures électriques dès la première année ?"
+    it:
+      weak: "No."
+      solid: "Quanti apprendisti avete?"
+      strong: "Sì: com'è una giornata tipo nel primo anno? E quando si fa il corso per il carrello elevatore?"
+    gsw:
+      weak: "Nei."
+      solid: "Wie vill Lernendi händ Sie?"
+      strong: "Ja: Wie gseht en normale Tag im erschte Lehrjahr us? Und dörf mer als Lernendi au scho Chunde berate?"
+    en:
+      weak: "No."
+      solid: "How many apprentices do you have?"
+      strong: "Yes: what does a typical day in the first year look like? And can apprentices do the vocational baccalaureate during the apprenticeship?"
+
+  _situational:
+    de:
+      weak: "Weiss nicht, ich würde schauen."
+      solid: "Ich würde ruhig bleiben und versuchen, eine Lösung zu finden."
+      strong: "Zuerst bleibe ich ruhig und höre genau zu, damit ich verstehe, was los ist. Dann erkläre ich freundlich, was ich tun kann, und wenn ich unsicher bin, hole ich eine erfahrene Person dazu. In der Schnupperlehre habe ich das so erlebt und es hat gut funktioniert."
+    fr:
+      weak: "Je ne sais pas."
+      solid: "Je resterais calme et j'essaierais de trouver une solution."
+      strong: "D'abord je reste calme et j'écoute bien pour comprendre le problème. Ensuite j'explique poliment ce que je peux faire et, si je ne suis pas sûre, j'appelle une personne expérimentée. Pendant mon stage, j'ai vu que ça marche bien."
+    it:
+      weak: "Non lo so."
+      solid: "Resterei calmo e cercherei una soluzione."
+      strong: "Prima resto calmo e ascolto bene per capire il problema. Poi spiego gentilmente cosa posso fare e, se non sono sicuro, chiamo una persona con più esperienza. Durante lo stage ho visto che funziona."
+    gsw:
+      weak: "Weiss nöd."
+      solid: "Ich würd ruhig bliibe und luege, dass es e Lösig git."
+      strong: "Zersch bliib ich ruhig und los guet zue, damit ich verstah, was los isch. Denn erklär ich fründlich, was ich chan mache, und wenn ich unsicher bin, hol ich öpper mit Erfahrig. Im Kiosk vo mim Onkel han ich das scho erlebt."
+    en:
+      weak: "I don't know."
+      solid: "I would stay calm and try to find a solution."
+      strong: "First I stay calm and listen carefully to understand the problem. Then I politely explain what I can do, and if I'm unsure I ask an experienced colleague. During my trial days I saw that this works well."
+
+  _motivation:
+    de:
+      weak: "Ist halt spannend."
+      solid: "Das interessiert mich, weil man jeden Tag etwas Neues lernt."
+      strong: "Mich interessiert das, weil ich in der Schnupperlehre gesehen habe, wie abwechslungsreich die Arbeit ist. Zum Beispiel durfte ich selbst etwas ausprobieren und habe gemerkt, dass mir genau das Spass macht. Zuhause mache ich ähnliche Dinge schon in meiner Freizeit."
+    fr:
+      weak: "C'est cool."
+      solid: "Ça m'intéresse parce qu'on apprend chaque jour quelque chose de nouveau."
+      strong: "Ça m'intéresse parce qu'au stage j'ai vu à quel point le travail est varié. Par exemple, j'ai pu essayer moi-même et j'ai senti que c'est exactement ce qui me plaît. À la maison, je fais déjà des choses semblables."
+    it:
+      weak: "È bello."
+      solid: "Mi interessa perché si impara qualcosa di nuovo ogni giorno."
+      strong: "Mi interessa perché durante lo stage ho visto quanto è vario il lavoro. Per esempio ho potuto provare da solo e ho capito che è proprio quello che mi piace. A casa faccio già cose simili nel tempo libero."
+    gsw:
+      weak: "Isch halt spannend."
+      solid: "Das interessiert mich, will mer jede Tag öppis Nöis lernt."
+      strong: "Das interessiert mich, will ich i de Schnupperlehr gseh han, wie abwechsligsriich d'Arbet isch. Zum Bispiel han ich sälber öppis dörfe usprobiere und gmerkt, dass mir genau das Spass macht."
+    en:
+      weak: "It's interesting."
+      solid: "It interests me because you learn something new every day."
+      strong: "It interests me because during my trial days I saw how varied the work is. For example, I got to try things myself and realised it's exactly what I enjoy. At home I already do similar things in my free time."
