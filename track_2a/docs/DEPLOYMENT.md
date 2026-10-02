@@ -35,7 +35,7 @@ make run-local
 
 Configure Apertus 1.5 8B through `LLM_NAME`, `LLM_BASE_URL` and `LLM_API_KEY`. The operator can host that same model locally; users cannot select another model/provider. SQLite defaults to a Docker volume; PostgreSQL is available for a larger deployment. Disable demo seed accounts, set secure cookies and use HTTPS before a real school rollout.
 
-Apertus 8B has roughly 16 GB of BF16 parameter storage, or about 5 GB with 4-bit quantization, plus runtime overhead. These are estimates, not a measured hardware result. The supplied Docker image was built by Cloud Build and run on Cloud Run. The local GPU path still needs a physical consumer-hardware measurement to verify the under-32-GB challenge gate.
+A complete local interview was measured on an Apple M4 Pro with 24 GiB unified memory using a community 4-bit Apertus 1.5 8B MLX conversion: 8 answers, 9 calls (1.12 per answer), no fallback turns, 5.155 GiB peak Metal allocation, 3.628 GiB peak process RSS and 87.13 seconds total. Apple Metal uses shared memory rather than dedicated NVIDIA VRAM. See `data/eval/results/local-apertus-hardware-test.json` for the measured run. The Docker image was built and verified on Cloud Run; NVIDIA Docker inference has not been hardware-tested.
 
 ## Recovery and cost
 

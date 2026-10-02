@@ -1,0 +1,66 @@
+{
+  "model": "tokimoa/apertus-v1.5-8b-mlx-4bit",
+  "quantization_bits": 4,
+  "hardware": "arm64",
+  "gpu": "Apple M4 Pro",
+  "physical_unified_ram_gib": 24.0,
+  "accelerator": "Apple Metal, unified memory",
+  "language": "en",
+  "answers": 8,
+  "model_calls": 9,
+  "calls_per_answer": 1.12,
+  "degraded_turns": 0,
+  "peak_metal_gib": 5.155,
+  "process_peak_rss_gib": 3.628,
+  "elapsed_seconds": 87.13,
+  "calls": [
+    {
+      "seconds": 9.92,
+      "tokens_out": 200,
+      "peak_metal_gib": 5.111
+    },
+    {
+      "seconds": 9.62,
+      "tokens_out": 219,
+      "peak_metal_gib": 5.124
+    },
+    {
+      "seconds": 9.62,
+      "tokens_out": 214,
+      "peak_metal_gib": 5.155
+    },
+    {
+      "seconds": 9.71,
+      "tokens_out": 228,
+      "peak_metal_gib": 5.155
+    },
+    {
+      "seconds": 9.42,
+      "tokens_out": 216,
+      "peak_metal_gib": 5.155
+    },
+    {
+      "seconds": 8.39,
+      "tokens_out": 169,
+      "peak_metal_gib": 5.155
+    },
+    {
+      "seconds": 9.39,
+      "tokens_out": 211,
+      "peak_metal_gib": 5.155
+    },
+    {
+      "seconds": 8.06,
+      "tokens_out": 154,
+      "peak_metal_gib": 5.155
+    },
+    {
+      "seconds": 9.03,
+      "tokens_out": 268,
+      "peak_metal_gib": 5.155
+    }
+  ],
+  "report_headline": "Strong technical initiative, but need to connect IT experience to healthcare assistance",
+  "memory_gate_pass": true,
+  "call_budget_pass": true
+}

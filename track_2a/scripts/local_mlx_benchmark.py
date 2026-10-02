@@ -30,7 +30,7 @@ def run(model_path, data_dir, language):
     mx.set_memory_limit(12 * 1024**3)
     mx.set_cache_limit(1024**3)
     started = time.perf_counter()
-    model, tokenizer = load(model_path, tokenizer_config={"trust_remote_code": False})
+    model, tokenizer = load(model_path, tokenizer_config={"trust_remote_code": False, "fix_mistral_regex": True})
     calls = []
 
     def infer(request):

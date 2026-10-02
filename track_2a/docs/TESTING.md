@@ -28,3 +28,7 @@ uv run --project src/backend python scripts/e2e_workspace.py --url https://zusag
 The live suite completes interviews in all five languages and checks session isolation, budget, end reports, progress, closed-session rejection, account export and teacher consent. Backend tests cover malformed provider responses, redaction, safety pause/retry, retention, typed profile validation, CSV idempotency, draft isolation, recovery, credential encryption, scheduler authentication and analytics.
 
 Consumer GPU memory and the official LLM-as-judge benchmark must be measured separately. Browser dictation and Web Push depend on browser permission and support. Never use real student or contact data in the public demo.
+
+## Measured local execution
+
+A complete real 4-bit Apertus 1.5 8B interview ran on Apple M4 Pro with 24 GiB unified memory: 8 answers, 9 model calls, no fallback turns, 5.155 GiB peak Metal allocation, 87.13 seconds. The local Metal benchmark instructions and recorded JSON are in the repository. NVIDIA Docker inference and the official judge benchmark remain unmeasured.

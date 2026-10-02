@@ -19,10 +19,12 @@ Source and testing instructions: https://github.com/shi1720/zusage
 
 Built by Shivam Gupta for Hack Apertus 2026, Track 2A / FHGR.
 
-The demo uses fictional learner data. The hosted app uses Google Cloud and the organiser's Apertus inference endpoint. The same Docker app supports local deployment. Consumer-GPU peak memory and the official judge benchmark still require separate measurement.
+The demo uses fictional learner data. The hosted app uses Google Cloud and the organiser's Apertus inference endpoint. The same Docker app supports local deployment. A complete local 4-bit Apertus interview on Apple M4 Pro used 5.155 GiB peak Metal allocation and 1.12 model calls per answer. Apple Metal uses unified memory. The official judge benchmark remains unmeasured.
 
 Voiceover: synthetic narration in standard US English, with a slower pace and controlled German pronunciation of Zusage. Captions are included.
 
 The extended walkthrough is 2 minutes 58 seconds. The submission cut is 1 minute 50 seconds, within the FHGR two-minute limit.
 
 #HackApertus #Apertus #SwissAI #Apprenticeships #Education
+
+Original demo and narration: CC BY 4.0. Attribution: Shivam Gupta, Zusage. https://creativecommons.org/licenses/by/4.0/

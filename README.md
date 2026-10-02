@@ -30,7 +30,7 @@ make test
 make lint
 ```
 
-The container serves the app at `http://localhost:8080`. `make run-local` from `track_2a` starts a local quantized Apertus 8B server. Fonts are bundled. A local GPU run still needs to be verified on actual consumer hardware; memory estimates are not benchmark measurements.
+The container serves the app at `http://localhost:8080`. `make run-local` from `track_2a` starts a local quantized Apertus 8B server. Fonts are bundled. A complete local interview was measured on an Apple M4 Pro with 24 GiB unified memory using a community 4-bit Apertus 1.5 8B MLX conversion: 8 answers, 9 calls (1.12 per answer), no fallback turns, 5.155 GiB peak Metal allocation, 3.628 GiB peak process RSS and 87.13 seconds total. Apple Metal uses shared memory rather than dedicated NVIDIA VRAM. See `data/eval/results/local-apertus-hardware-test.json` for the measured run. The Docker image was built and verified on Cloud Run; NVIDIA Docker inference has not been hardware-tested.
 
 ```bash
 cd track_2a
@@ -48,12 +48,12 @@ The optional Metal benchmark runs a complete interview through the same coach en
 uv venv .mlx-bench --python 3.12
 uv pip install --python .mlx-bench/bin/python ./src/backend mlx-lm
 .mlx-bench/bin/hf download tokimoa/apertus-v1.5-8b-mlx-4bit \
-  --local-dir models/apertus-mlx --include '*.json' '*.safetensors' '*.txt' '*.model'
+  --local-dir models/apertus-mlx --include '*.json' '*.safetensors' '*.txt' '*.model' '*.jinja'
 .mlx-bench/bin/python scripts/local_mlx_benchmark.py \
   --model models/apertus-mlx --data data --out local-benchmark.json
 ```
 
-This uses a [community 4-bit MLX conversion](https://huggingface.co/tokimoa/apertus-v1.5-8b-mlx-4bit) of Apertus 1.5 8B. Apple GPUs share system memory, so Metal allocation differs from dedicated NVIDIA VRAM. Record the actual result before claiming the hardware gate. The Docker path remains the application deployment route.
+This uses a [community 4-bit MLX conversion](https://huggingface.co/tokimoa/apertus-v1.5-8b-mlx-4bit) of Apertus 1.5 8B. Apple GPUs share system memory, so Metal allocation differs from dedicated NVIDIA VRAM. The recorded M4 Pro run used 5.155 GiB peak Metal allocation and 1.12 calls per answer. The Docker path remains the application deployment route.
 
 ## Deployment and verification
 
@@ -64,3 +64,7 @@ Current automated validation: 77 backend tests and 9 frontend tests, plus live H
 See [deployment](track_2a/docs/DEPLOYMENT.md), [testing instructions](track_2a/docs/TESTING.md), [privacy](track_2a/docs/PRIVACY.md), [feature comparison](track_2a/docs/OFFERLOOP_PARITY.md) and [technical report](track_2a/technical_report.md).
 
 Apache-2.0. Offerloop-inspired workflow design is adapted for apprenticeship learners. The application coach remains Apertus 1.5 8B.
+
+## Licenses
+
+Code is Apache-2.0, original documentation and designs are CC-BY-4.0, and original submitted datasets are CDLA-Permissive-2.0. Third-party components retain their own licenses. See the repository LICENSES directory.

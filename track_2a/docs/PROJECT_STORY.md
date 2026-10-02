@@ -49,3 +49,7 @@ Visit https://zusage.web.app and choose **Try as student**. Follow the tour, sta
 For a new account, create a student or teacher username and password. The app works without adding an API key. Profile settings include a recovery code, account export, language preferences and an optional personal Apertus key.
 
 The Docker and testing instructions are in the public repository: https://github.com/shi1720/zusage.
+
+## Runtime evidence
+
+The hosted five-language run completed 38 answers with 43 Apertus calls and no fallbacks. A complete local 4-bit Apertus 1.5 8B interview also ran on Apple M4 Pro with 24 GiB unified memory, using 5.155 GiB peak Metal allocation and 1.12 calls per answer. Apple uses shared memory; this is not a measurement of dedicated NVIDIA VRAM.

@@ -7,8 +7,8 @@
 - Source: https://github.com/shi1720/zusage, default branch `aperture-redesign`
 - Six-page report: `track_2a/Zusage_Report.pdf`
 - Test instructions: `track_2a/docs/TESTING.md`
-- Demo video: upload the reviewed two-minute demo and caption file. Human video approval is required before final submission.
+- Demo video: https://youtu.be/kNNu796CueY, approved two-minute cut with English captions. Extended demo: https://youtu.be/jgWSAaASskg.
 - Participant: Shivam Gupta, GitHub `shi1720`
 - Swiss student team: No, confirmed by the participant.
 
-The actual Hack Apertus form requests a report and demo video, rather than a Devpost story editor. Keep the project story available for the notes field or another submission platform. Leave final submission and terms acceptance for the approved workflow.
+The actual Hack Apertus form requests a report and demo video, rather than a Devpost story editor. Keep the project story available for the notes field or another submission platform. The participant approved publication and authorized terms acceptance and final submission on 2 October 2026.
