@@ -226,7 +226,8 @@ def generate(session: Session, user: User, app: Application, kind: str, brain) -
                 "profile stories and questions to ask. If there is no real story, ask the learner to supply one. "
                 "Write the pack as readable plain text with headings and line breaks inside the contents string."
                 if kind == "prep"
-                else f"Write ONLY a {kind.replace('_', ' ')} message. Do not include interview questions or a prep pack."
+                else f"Write ONLY a {kind.replace('_', ' ')} message. "
+                "Do not include interview questions or a prep pack."
             )
             result = brain.client.complete_json(
                 "You are Zusage, a Swiss apprenticeship coach powered by Apertus. "
