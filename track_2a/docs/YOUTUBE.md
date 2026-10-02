@@ -1,8 +1,12 @@
-# Title
+# Extended demo title
 
 Zusage: Find Your Words Before Your First Interview | Hack Apertus 2026
 
-# Description
+# Submission cut title
+
+Zusage | Swiss Apprenticeship Interview Coach | Hack Apertus 2026 Submission
+
+# Description (both cuts)
 
 Your first interview should not be your first chance to practise.
 
@@ -17,6 +21,8 @@ Built by Shivam Gupta for Hack Apertus 2026, Track 2A / FHGR.
 
 The demo uses fictional learner data. The hosted app uses Google Cloud and the organiser's Apertus inference endpoint. The same Docker app supports local deployment. Consumer-GPU peak memory and the official judge benchmark still require separate measurement.
 
-Voiceover: synthetic narration in standard US English. Captions are included.
+Voiceover: synthetic narration in standard US English, with a slower pace and controlled German pronunciation of Zusage. Captions are included.
+
+The extended walkthrough is 2 minutes 58 seconds. The submission cut is 1 minute 50 seconds, within the FHGR two-minute limit.
 
 #HackApertus #Apertus #SwissAI #Apprenticeships #Education

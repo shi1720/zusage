@@ -9,6 +9,6 @@
 - Test instructions: `track_2a/docs/TESTING.md`
 - Demo video: upload the reviewed two-minute demo and caption file. Human video approval is required before final submission.
 - Participant: Shivam Gupta, GitHub `shi1720`
-- Swiss student team: confirm with the participant; do not infer eligibility.
+- Swiss student team: No, confirmed by the participant.
 
 The actual Hack Apertus form requests a report and demo video, rather than a Devpost story editor. Keep the project story available for the notes field or another submission platform. Leave final submission and terms acceptance for the approved workflow.
