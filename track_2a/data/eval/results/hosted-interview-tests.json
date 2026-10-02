@@ -1,0 +1,56 @@
+{
+  "url": "https://zusage.web.app",
+  "languages": [
+    {
+      "language": "de",
+      "answers": 7,
+      "model_calls": 8,
+      "calls_per_answer": 1.14,
+      "degraded_turns": 0,
+      "feedback_with_evidence": 5,
+      "duration_s": 19.3,
+      "passed": true
+    },
+    {
+      "language": "fr",
+      "answers": 8,
+      "model_calls": 9,
+      "calls_per_answer": 1.12,
+      "degraded_turns": 0,
+      "feedback_with_evidence": 8,
+      "duration_s": 20.8,
+      "passed": true
+    },
+    {
+      "language": "it",
+      "answers": 7,
+      "model_calls": 8,
+      "calls_per_answer": 1.14,
+      "degraded_turns": 0,
+      "feedback_with_evidence": 1,
+      "duration_s": 17.99,
+      "passed": true
+    },
+    {
+      "language": "en",
+      "answers": 8,
+      "model_calls": 9,
+      "calls_per_answer": 1.12,
+      "degraded_turns": 0,
+      "feedback_with_evidence": 8,
+      "duration_s": 18.45,
+      "passed": true
+    },
+    {
+      "language": "gsw",
+      "answers": 8,
+      "model_calls": 9,
+      "calls_per_answer": 1.12,
+      "degraded_turns": 0,
+      "feedback_with_evidence": 7,
+      "duration_s": 21.81,
+      "passed": true
+    }
+  ],
+  "teacher_consent": true
+}

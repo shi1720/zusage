@@ -36,3 +36,26 @@ jobs:
           npm ci
           npm test
           npm run build
+
+  docker-clean-checkout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify submission layout and data limit
+        run: python3 track_2a/scripts/check_template.py
+      - name: Build and launch from repository root
+        run: make run NAME=zusage-ci IMAGE=zusage:ci
+      - name: Check exported template variables reach Docker
+        run: |
+          export LLM_NAME=swiss-ai/Apertus-v1.5-8B
+          export LLM_BASE_URL=
+          export LLM_API_KEY=synthetic-ci-env-check
+          make run NAME=zusage-ci IMAGE=zusage:ci
+          docker exec zusage-ci python -c "import os; assert os.environ['LLM_API_KEY'] == 'synthetic-ci-env-check'"
+      - name: Container logs and cleanup
+        if: always()
+        run: |
+          docker logs zusage-ci || true
+          docker rm -f zusage-ci || true
+          docker volume rm zusage-ci-data || true

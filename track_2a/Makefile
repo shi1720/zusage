@@ -29,7 +29,9 @@ build:
 
 run: .env build
 	-@docker rm -f $(NAME) >/dev/null 2>&1
-	docker run -d --name $(NAME) --env-file .env -p $(PORT):8080 -v zusage-data:/app/var $(IMAGE)
+	@env_args=(); for key in LLM_NAME LLM_BASE_URL LLM_API_KEY; do \
+		if [[ -v $$key ]]; then env_args+=(-e "$$key"); fi; \
+	done; docker run -d --name $(NAME) --env-file .env "$${env_args[@]}" -p $(PORT):8080 -v $(NAME)-data:/app/var $(IMAGE)
 	@echo "→ waiting for Zusage to become healthy…"
 	@for i in $$(seq 1 60); do curl -fs $(URL)/api/health >/dev/null 2>&1 && break; sleep 2; done
 	docker exec $(NAME) zusage selfcheck --url http://127.0.0.1:8080
@@ -61,7 +63,7 @@ logs:
 	docker logs -f --tail=100 $(NAME)
 
 clean: stop
-	-docker volume rm zusage-data
+	-docker volume rm $(NAME)-data
 
 # --- local development (needs Python 3.11+ with uv, Node 22) ---------------
 test:

@@ -6,6 +6,23 @@
 
 Zusage helps young people practise realistic interviews, reflect on their own answers, retry with better examples and turn feedback into spaced practice. German, French and Italian meet the challenge requirements. English is the default interface; Swiss German interview practice is also available.
 
+## Challenge and judging requirements
+
+This is **Track 2A / FHGR: AI-Powered Job Interview Coach**. The goal is realistic interview practice and constructive feedback for Swiss apprenticeship seekers. Apertus is the interview and writing model; optional Google speech synthesis only reads interviewer text.
+
+Required deliverables are a runnable Docker container, deployment instructions, source code, an explanation of the idea and strategy, and a visual overview. This directory is the project root and retains the template's `README.md`, `technical_report.md`, `Makefile`, `src/`, `data/` and `docs/` paths. The original challenge text is preserved in [docs/CHALLENGE.md](docs/CHALLENGE.md).
+
+| Criterion | Requirement or weight | Evidence |
+|---|---|---|
+| Practicality and runtime | Consumer hardware below 32 GB VRAM; fewer than 5 LLM calls per candidate answer | M4 Pro local run: 5.155 GiB peak Metal allocation, 24 GiB unified RAM and 1.12 calls per answer. Dedicated NVIDIA VRAM is not measured. |
+| Performance | 50%, official LLM-as-judge benchmark | Harness included; official benchmark result not claimed. |
+| Consistency | 25%, profiles, scenarios, questions and languages | Functional regression tests and five-language live interviews. |
+| Innovation | 25%, methods and architecture | One structured call per answer, verified evidence, self-assessment, retries, spaced drills and consent-aware teacher progress. |
+
+**[Technical report](technical_report.md)** · **[Visual overview](docs/OVERVIEW.md)** · **[Submission video](https://youtu.be/kNNu796CueY)** · **[Six-page submitted report](Zusage_Report.pdf)**
+
+Runtime prerequisites: a running Docker daemon, internet access for the initial image build, and port 8080 available. No host Python or Node installation is needed for `make run`. Credentials are optional for the labelled offline demo and required for hosted Apertus inference. Local inference requires downloaded Apertus weights. `data/` must remain below 100 MB; weights and private user data are excluded.
+
 ## What you can do
 
 - Practise 12 apprenticeships with three interviewer styles, in training or dress rehearsal mode.
