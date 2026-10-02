@@ -5,7 +5,6 @@ import { createContext, useCallback, useContext, useMemo, useState } from "react
 
 import type { InterviewLang, Lang, Localized } from "../types";
 import { WORKSPACE_STRINGS } from "./workspaceStrings";
-import { STRINGS } from "./strings";
 
 type Vars = Record<string, string | number>;
 
@@ -28,7 +27,7 @@ export function detectLang(): Lang {
 }
 
 export function translate(lang: Lang, source: string, vars?: Vars): string {
-  let text = lang === "en" ? source : (WORKSPACE_STRINGS[lang] as Record<string, string>)?.[source] ?? (WORKSPACE_STRINGS[lang] as Record<string,string>)?.[source] ?? (WORKSPACE_STRINGS[lang] as Record<string,string>)?.[source] ?? STRINGS[lang]?.[source] ?? source;
+  let text = lang === "en" ? source : (WORKSPACE_STRINGS[lang] as Record<string, string>)?.[source] ?? (WORKSPACE_STRINGS[lang] as Record<string,string>)?.[source] ?? (WORKSPACE_STRINGS[lang] as Record<string,string>)?.[source] ?? source;
   if (vars) for (const [key, value] of Object.entries(vars)) text = text.replaceAll(`{${key}}`, String(value));
   return text;
 }

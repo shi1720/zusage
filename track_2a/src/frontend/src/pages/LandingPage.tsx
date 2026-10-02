@@ -19,17 +19,17 @@ function HeroExchange() {
         <div className="flex items-center gap-3">
           <span className="flex h-10 w-10 items-center justify-center rounded-full bg-raised text-lg">🌿</span>
           <div>
-            <p className="text-sm font-bold">Frau Caduff</p>
+            <p className="text-sm font-bold">{lang === "en" ? "Ms Caduff" : "Frau Caduff"}</p>
             <p className="text-xs text-ink-3">{t("Vocational trainer · Pflegezentrum Calanda, Chur")}</p>
           </div>
         </div>
         <p className="mt-4 font-display text-[19px] leading-snug font-semibold">
-          {lang === "en" ? "Why is this apprenticeship right for you?" : "Warum möchten Sie gerade diese Lehre machen?"}
+          {{en:"Why is this apprenticeship right for you?",de:"Warum möchten Sie gerade diese Lehre machen?",fr:"Pourquoi cet apprentissage vous correspond-il ?",it:"Perché questo apprendistato è adatto a te?"}[lang]}
         </p>
       </div>
 
       <div className="animate-rise mt-3 ml-10 rounded-2xl bg-ink p-4 text-[15px] leading-relaxed text-white" style={{ animationDelay: "0.15s" }}>
-        {lang === "en" ? <>During my trial day, I helped a resident with lunch. <mark className="rounded bg-sign px-1 text-ink">She smiled and thanked me.</mark> That moment made me want to work in care.</> : <>In der Schnupperlehre habe ich einer älteren Frau beim Essen geholfen. <mark className="rounded bg-sign px-1 text-ink">Sie hat sich so gefreut.</mark></>}
+        {{en:"During my trial day, I helped a resident with lunch. She smiled and thanked me. That moment made me want to work in care.",de:"In der Schnupperlehre habe ich einer älteren Frau beim Essen geholfen. Sie hat sich so gefreut. Da wusste ich, dass ich in der Pflege arbeiten möchte.",fr:"Pendant mon stage, j’ai aidé une résidente à déjeuner. Elle m’a souri et remercié. Ce moment m’a donné envie de travailler dans les soins.",it:"Durante il mio stage, ho aiutato una residente a pranzare. Mi ha sorriso e ringraziato. Quel momento mi ha fatto desiderare di lavorare nell’assistenza."}[lang]}
       </div>
 
       <div className="ring-card animate-rise mt-3 rounded-2xl border-l-4 border-dusk bg-card p-4" style={{ animationDelay: "0.3s" }}>
