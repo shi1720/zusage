@@ -1,0 +1,57 @@
+{
+  "base_url": "https://zusage.web.app",
+  "model": "Chirp3-HD-Aoede",
+  "rate": 0.85,
+  "results": [
+    {
+      "language": "en",
+      "status": 200,
+      "bytes": 86592,
+      "duration_seconds": 21.65,
+      "generation_seconds": 4.01,
+      "replay_matches": true,
+      "arbitrary_text_rejected": true,
+      "invalid_rate_rejected": true
+    },
+    {
+      "language": "de",
+      "status": 200,
+      "bytes": 94176,
+      "duration_seconds": 23.54,
+      "generation_seconds": 4.15,
+      "replay_matches": true,
+      "arbitrary_text_rejected": true,
+      "invalid_rate_rejected": true
+    },
+    {
+      "language": "fr",
+      "status": 200,
+      "bytes": 93696,
+      "duration_seconds": 23.42,
+      "generation_seconds": 4.37,
+      "replay_matches": true,
+      "arbitrary_text_rejected": true,
+      "invalid_rate_rejected": true
+    },
+    {
+      "language": "it",
+      "status": 200,
+      "bytes": 89952,
+      "duration_seconds": 22.49,
+      "generation_seconds": 4.07,
+      "replay_matches": true,
+      "arbitrary_text_rejected": true,
+      "invalid_rate_rejected": true
+    },
+    {
+      "language": "gsw",
+      "status": 200,
+      "bytes": 102336,
+      "duration_seconds": 25.58,
+      "generation_seconds": 4.46,
+      "replay_matches": true,
+      "arbitrary_text_rejected": true,
+      "invalid_rate_rejected": true
+    }
+  ]
+}
