@@ -33,7 +33,7 @@ read my interview answers"**, revocable at any time. Leaving a class revokes con
 - The hosted demo sends redacted interview context to the organiser's Apertus endpoint and stores data on Google Cloud. A local deployment can keep processing on the school server. Operator agreements and retention policies need review before using real student data.
 - Optional browser dictation uses the browser's speech service (in Chrome this streams
   audio to the browser vendor) - it is **off by default** and labelled; typing is always
-  available. Text-to-speech uses on-device voices.
+  available. Hosted natural speech uses Google Cloud Chirp 3 HD through the EU API endpoint. Only the current interviewer text (with contact identifiers redacted) is sent; candidate answer bodies are not sent to the speech service. Audio is held in bounded temporary memory caches, not saved in the database. Speech stays off until enabled. Device voice is an alternative and follows the browser’s voice provider. Local deployments leave cloud speech disabled by default.
 
 ## Safety for minors
 

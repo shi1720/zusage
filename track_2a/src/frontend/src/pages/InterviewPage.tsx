@@ -269,8 +269,12 @@ export default function InterviewPage() {
   const scroller = useRef<HTMLDivElement>(null);
   const lastSpoken = useRef<string>("");
 
-  const lang = iv?.language ?? "de";
-  const tts = useTts(lang);
+  const lang = iv?.language ?? "en";
+  const { data: speechConfig } = useQuery({ queryKey: ["config"], queryFn: api.config });
+  const [voiceMode, setVoiceMode] = useState(() => { try { return localStorage.getItem("zusage.voiceMode") ?? "natural"; } catch { return "natural"; } });
+  const [voiceRate, setVoiceRate] = useState(0.95);
+  const naturalVoice = Boolean(speechConfig?.natural_voice) && voiceMode === "natural";
+  const tts = useTts(lang, id, naturalVoice, voiceRate);
   const appendDictation = useCallback((text: string) => setDraft((d) => (d ? `${d} ${text}` : text)), []);
   const dictation = useDictation(lang, appendDictation);
 
@@ -310,12 +314,13 @@ export default function InterviewPage() {
 
   // speak new interviewer messages when voice is on
   useEffect(() => {
-    if (!iv || !voiceOn || iv.safety_pause) return;
+    if (!iv || !voiceOn || !speechConfig) return;
+    if (iv.safety_pause) { tts.stop(); return; }
     if (iv.interviewer_message && iv.interviewer_message !== lastSpoken.current) {
       lastSpoken.current = iv.interviewer_message;
       tts.speak(iv.interviewer_message);
     }
-  }, [iv, voiceOn, tts]);
+  }, [iv, voiceOn, speechConfig, tts]);
 
   useEffect(() => {
     scroller.current?.scrollTo({ top: scroller.current.scrollHeight, behavior: "smooth" });
@@ -355,6 +360,7 @@ export default function InterviewPage() {
     const answer = draft.trim();
     if (!answer || send.isPending) return;
     if (dictation.listening) dictation.stop();
+    tts.stop();
     send.mutate(answer);
   };
 
@@ -399,6 +405,27 @@ export default function InterviewPage() {
           <Square size={14} /> {t("Finish")}
         </Button>
       </header>
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-line-soft bg-panel px-4 py-2 text-xs text-ink-2">
+        <label className="flex items-center gap-2">{t("Voice")}
+          <select aria-label={t("Voice quality")} className="rounded-md border border-line-soft bg-page p-1.5" value={naturalVoice ? "natural" : "device"}
+            onChange={e => { tts.stop(); setVoiceMode(e.target.value); try { localStorage.setItem("zusage.voiceMode", e.target.value); } catch { /* private browser */ } }}>
+            {speechConfig?.natural_voice && <option value="natural">{t("Natural voice")}</option>}
+            <option value="device">{t("Device voice")}</option>
+          </select>
+        </label>
+        <label className="flex items-center gap-2">{t("Pace")}
+          <select aria-label={t("Speech pace")} className="rounded-md border border-line-soft bg-page p-1.5" value={voiceRate} onChange={e => setVoiceRate(Number(e.target.value))}>
+            <option value={0.95}>{t("Comfortable")}</option><option value={0.85}>{t("Slower")}</option><option value={1.05}>{t("Faster")}</option>
+          </select>
+        </label>
+        {tts.speaking ? <button className="font-semibold text-sign-ink" onClick={tts.stop}>{tts.loading ? t("Preparing voice...") : t("Stop reading")}</button>
+          : <button className="font-semibold text-sign-ink" onClick={() => tts.speak(retryQuestion ?? iv.interviewer_message)} disabled={!tts.available || Boolean(iv.safety_pause)}>{t("Read aloud")}</button>}
+        <span className="basis-full text-ink-3 sm:basis-auto" role="status">
+          {tts.blocked ? t("Tap Read aloud to start audio.") : tts.fallback ? t("Natural voice is unavailable. Using device voice.")
+            : naturalVoice ? t("Google neural voice. Only interviewer text is sent for speech.") : t("Uses your device's available voices.")}
+          {lang === "gsw" && naturalVoice && ` ${t("Swiss German uses a German voice; dialect pronunciation may vary.")}`}
+        </span>
+      </div>
 
       <div className="flex min-h-0 flex-1">
         {/* conversation */}

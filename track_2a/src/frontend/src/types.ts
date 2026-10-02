@@ -18,6 +18,7 @@ export interface User {
 }
 
 export interface AppConfig {
+  natural_voice?: boolean;
   push_public_key?: string;
   version: string;
   mode: "live" | "offline";

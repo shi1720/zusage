@@ -68,3 +68,9 @@ Apache-2.0. Offerloop-inspired workflow design is adapted for apprenticeship lea
 ## Licenses
 
 Code is Apache-2.0, original documentation and designs are CC-BY-4.0, and original submitted datasets are CDLA-Permissive-2.0. Third-party components retain their own licenses. See the repository LICENSES directory.
+
+## Interview speech
+
+The hosted app offers Google Cloud Chirp 3 HD (Aoede) natural speech in English, German, French and Italian, with comfortable/slower/faster pacing and replay/stop controls. Swiss German uses the German voice and is labelled as approximate dialect pronunciation. Apertus 1.5 8B still generates every interview question and response; speech synthesis does not replace the coach model. Voice starts only when enabled or Read aloud is pressed. Only owned, current interviewer text can be synthesized; contact identifiers are redacted. Audio uses bounded temporary memory caches. Provider failures are labelled and fall back to device speech. Local deployments default to browser/device speech.
+
+To enable natural speech on a GCP deployment, enable the Cloud Text-to-Speech API, give the runtime service account Service Usage Consumer on the project, and set ZUSAGE_TTS_ENABLED=true and ZUSAGE_TTS_PROJECT to that project ID. Application Default Credentials are used; no speech key is shipped to the browser. The EU synthesis endpoint is used. Google Cloud speech usage is billed to the deployment project.

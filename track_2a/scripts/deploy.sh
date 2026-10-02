@@ -17,7 +17,7 @@ gcloud run deploy "$SERVICE" --image "$IMAGE" --project "$PROJECT" --region "$RE
   --service-account "$ACCOUNT" --allow-unauthenticated --port 8080 \
   --memory 1Gi --cpu 1 --min-instances 0 --max-instances 2 --concurrency 8 --timeout 60 \
   --add-cloudsql-instances "$PROJECT:$REGION:zusage-db" \
-  --set-env-vars 'LLM_NAME=apertus-v1.5-8b,LLM_BASE_URL=https://hackapertus.livemap.sh/v1,ZUSAGE_COOKIE_SECURE=true,ZUSAGE_SEED_DEMO=true,ZUSAGE_ISOLATE_DEMO=true,ZUSAGE_LLM_TIMEOUT_S=12,ZUSAGE_LLM_MAX_RETRIES=0' \
+  --set-env-vars "LLM_NAME=apertus-v1.5-8b,LLM_BASE_URL=https://hackapertus.livemap.sh/v1,ZUSAGE_COOKIE_SECURE=true,ZUSAGE_SEED_DEMO=true,ZUSAGE_ISOLATE_DEMO=true,ZUSAGE_LLM_TIMEOUT_S=12,ZUSAGE_LLM_MAX_RETRIES=0,ZUSAGE_TTS_ENABLED=true,ZUSAGE_TTS_PROJECT=$PROJECT" \
   --set-secrets 'LLM_API_KEY=zusage-apertus-key:latest,ZUSAGE_SECRET_KEY=zusage-session-key:latest,ZUSAGE_DATABASE_URL=zusage-database-url:latest,ZUSAGE_HARNESS_KEY=zusage-harness-key:latest,ZUSAGE_TASK_KEY=zusage-task-key:latest,ZUSAGE_PUSH_PRIVATE_KEY=zusage-push-private:latest,ZUSAGE_PUSH_PUBLIC_KEY=zusage-push-public:latest' \
   --quiet
 # The config targets only the named Hosting site, not any other project sites.

@@ -61,6 +61,8 @@ class Settings(BaseSettings):
     cookie_secure: bool = False
     seed_demo: bool = True
     isolate_demo: bool = True
+    tts_enabled: bool = False  # opt-in deployment setting; local installations use device speech
+    tts_project: str = ""
 
     # --- product knobs ---------------------------------------------------
     max_followups_per_interview: int = 3

@@ -2,8 +2,8 @@
 
 One container serves everything: the JSON API under ``/api/*`` and the built
 React app for every other route. Runs on a school server, a canton's
-on-premise cluster, or air-gapped next to a local Apertus - no external call
-is made at runtime except to the configured ``LLM_BASE_URL``.
+on-premise cluster, or air-gapped next to a local Apertus. Cloud voice, posting
+retrieval and push are optional; local voice remains available.
 """
 
 from __future__ import annotations
@@ -22,7 +22,7 @@ from fastapi.staticfiles import StaticFiles
 from sqlmodel import Session, col, select
 
 from . import __version__
-from .api import auth, classes, harness, interviews, journey, workspace
+from .api import auth, classes, harness, interviews, journey, speech, workspace
 from .config import Settings, get_settings
 from .db import Interview, make_engine, utcnow
 from .engine.brain import build_brain
@@ -118,6 +118,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.state.engine = engine
     app.state.brain = brain
     app.state.turn_graph = build_turn_graph(kb, brain, settings)
+    app.state.speech = speech.SpeechService(settings)
     app.dependency_overrides[get_settings] = lambda: settings
     log.info("coach brain: %s (%s)", brain.name, brain.model)
 
@@ -147,6 +148,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             "model": settings.llm_name if settings.llm_enabled else brain.model,
             "demo": settings.seed_demo,
             "push_public_key": settings.push_public_key,
+            "natural_voice": settings.tts_enabled,
         }
 
     @app.get("/api/health", tags=["meta"])
@@ -157,7 +159,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             out["llm"] = {"reachable": ok, "detail": detail}
         return out
 
-    for router in (auth.router, interviews.router, journey.router, classes.router, harness.router, workspace.router):
+    for router in (auth.router, interviews.router, journey.router, classes.router,
+                   harness.router, workspace.router, speech.router):
         app.include_router(router)
 
     static = _static_dir(settings)
