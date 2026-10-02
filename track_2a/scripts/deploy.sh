@@ -25,8 +25,13 @@ FIREBASE_CONFIG=$(mktemp)
 trap 'rm -f "$FIREBASE_CONFIG"' EXIT
 python3 - "$SITE" "$REGION" "$FIREBASE_CONFIG" <<'PY'
 import json,sys
+from pathlib import Path
 site,region,path=sys.argv[1:]
-config={"hosting":{"site":site,"public":"src/frontend/dist","ignore":["firebase.json","**/.*","**/node_modules/**"],"rewrites":[{"source":"/api/**","run":{"serviceId":"zusage","region":region}},{"source":"/v1/**","run":{"serviceId":"zusage","region":region}},{"source":"**","destination":"/index.html"}],"headers":[{"source":"/assets/**","headers":[{"key":"Cache-Control","value":"public,max-age=31536000,immutable"}]},{"source":"**","headers":[{"key":"X-Content-Type-Options","value":"nosniff"},{"key":"X-Frame-Options","value":"DENY"}]}]}}
+config=json.loads(Path('firebase.json').read_text())
+config['hosting']['site']=site
+for rewrite in config['hosting']['rewrites']:
+    if 'run' in rewrite:
+        rewrite['run']['region']=region
 # Firebase resolves public paths relative to its config, so use an absolute path.
 from pathlib import Path
 config['hosting']['public']=str(Path('src/frontend/dist').resolve())
